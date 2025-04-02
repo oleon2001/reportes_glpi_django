@@ -538,20 +538,16 @@
             });
         }
 
-        // Función para generar el reporte
+        // Reemplaza la función generarReporte() con esta versión mejorada
         function generarReporte() {
             const fecha_ini = $('#fecha_ini').val();
             const fecha_fin = $('#fecha_fin').val();
-            const tecnicos = JSON.parse($('#tecnicos').val() || '[]');
-
-            if(!fecha_ini || !fecha_fin) {
-                mostrarAlerta('Por favor complete ambas fechas', 'warning');
-                return;
-            }
-
-            if(new Date(fecha_ini) > new Date(fecha_fin)) {
-                mostrarAlerta('La fecha de inicio no puede ser mayor a la fecha fin', 'warning');
-                return;
+            let tecnicos = [];
+            
+            try {
+                tecnicos = JSON.parse($('#tecnicos').val() || '[]');
+            } catch (e) {
+                tecnicos = [];
             }
 
             $('#loading').show();
@@ -559,27 +555,60 @@
             $.ajax({
                 url: '/generar-reporte/',
                 method: 'POST',
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken")  // Añade esto
+                },
                 data: {
                     'fecha_ini': fecha_ini,
                     'fecha_fin': fecha_fin,
-                    'tecnicos[]': tecnicos
+                    'tecnicos': tecnicos,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'  // O esta alternativa
                 },
                 success: function(data) {
-                    if(data.error) {
+                    if(data && data.error) {
                         mostrarAlerta('Error: ' + data.error, 'danger');
                         return;
                     }
-                    mostrarResultados(data.data);
+                    if(!data) {
+                        mostrarAlerta('Respuesta vacía del servidor', 'danger');
+                        return;
+                    }
+                    mostrarResultados(data.data || data);
                 },
-                error: function(xhr) {
-                    mostrarAlerta('Error: ' + xhr.responseJSON.error, 'danger');
+                error: function(xhr, status, error) {
+                    let errorMsg = 'Error al conectar con el servidor';
+                    try {
+                        if(xhr.responseText) {
+                            const response = JSON.parse(xhr.responseText);
+                            errorMsg = response.error || xhr.statusText;
+                        }
+                    } catch(e) {
+                        errorMsg = xhr.statusText || error;
+                    }
+                    mostrarAlerta(errorMsg, 'danger');
+                    console.error('Detalles del error:', status, error, xhr);
                 },
                 complete: function() {
                     $('#loading').hide();
                 }
             });
         }
+        
 
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+    return cookieValue;
+}
         // Función para mostrar los resultados
         function mostrarResultados(data) {
             if(data.length === 0) {

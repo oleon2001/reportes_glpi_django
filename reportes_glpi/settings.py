@@ -107,6 +107,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8080']  # Añade tu dominio
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8080",
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
