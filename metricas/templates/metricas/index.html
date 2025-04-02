@@ -1,0 +1,759 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes GLPI - Métricas de Técnicos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --color-primary: #2A9D8F;
+            --color-secondary: #264653;
+            --color-accent: #E9C46A;
+            --color-danger: #E76F51;
+            --color-light: #FFFFFF;
+            --color-dark: #212529;
+            --color-bg: #F8F9FA;
+        }
+        
+        body {
+            background-color: var(--color-bg);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .card {
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card-header {
+            background-color: var(--color-primary);
+            color: white;
+            border-bottom: none;
+            padding: 1.25rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-primary {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            backdrop-filter: blur(3px);
+            display: none;
+        }
+        
+        .spinner-text {
+            margin-top: 1rem;
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        
+        .table-responsive {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .table {
+            margin-bottom: 0;
+        }
+        
+        .table thead th {
+            background-color: var(--color-primary);
+            color: white;
+            border-bottom: none;
+            padding: 1rem;
+            font-weight: 600;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .table tbody tr {
+            transition: background-color 0.2s ease;
+        }
+        
+        .table tbody tr:hover {
+            background-color: rgba(42, 157, 143, 0.1);
+        }
+        
+        .table tbody td {
+            padding: 0.75rem 1rem;
+            vertical-align: middle;
+        }
+        
+        .badge-sla {
+            background-color: rgba(42, 157, 143, 0.1);
+            color: var(--color-primary);
+            font-weight: 600;
+            padding: 0.35rem 0.65rem;
+            border-radius: 50px;
+        }
+        
+        .badge-danger {
+            background-color: rgba(231, 111, 81, 0.1);
+            color: var(--color-danger);
+            font-weight: 600;
+            padding: 0.35rem 0.65rem;
+            border-radius: 50px;
+        }
+        
+        .date-input {
+            height: 45px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            padding: 0.5rem 1rem;
+        }
+        
+        .date-input:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 0.25rem rgba(42, 157, 143, 0.25);
+        }
+        
+        .result-card {
+            margin-top: 2rem;
+        }
+        
+        .ticket-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .ticket-link:hover {
+            color: var(--color-secondary);
+            text-decoration: underline;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #6c757d;
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #dee2e6;
+        }
+
+        /* Estilos para el selector de técnicos */
+        .select-multiple-container {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .select-multiple-container select {
+            border: 1px solid #ced4da;
+            width: 100%;
+            height: 300px;
+            padding: 5px;
+        }
+
+        .select-multiple-actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .select-multiple-actions .btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tech-select-label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .select-all-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .select-all-buttons .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .tech-list-container {
+            position: relative;
+        }
+
+        .tech-counter {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .tech-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .search-box {
+            margin-bottom: 10px;
+        }
+
+        .search-box input {
+            border-radius: 20px;
+            padding-left: 30px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0"><i class="bi bi-speedometer2 me-2"></i>Reporte de Métricas de Técnicos</h3>
+                    <span class="badge bg-light text-dark"><i class="bi bi-calendar me-1"></i> <span id="current-date"></span></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Fecha Inicio</label>
+                        <input type="date" class="form-control date-input" id="fecha_ini" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Fecha Fin</label>
+                        <input type="date" class="form-control date-input" id="fecha_fin" required>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Seleccionar Técnicos</label>
+                    <div class="select-multiple-container">
+                        <div class="select-all-buttons">
+                            <button class="btn btn-sm btn-outline-primary" onclick="seleccionarTodos()">
+                                <i class="bi bi-check-all me-1"></i>Seleccionar todos
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="deseleccionarTodos()">
+                                <i class="bi bi-x-circle me-1"></i>Limpiar selección
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 tech-list-container">
+                                <span id="disponibles-counter" class="tech-counter">0</span>
+                                <div class="tech-list-header">
+                                    <label class="tech-select-label">Técnicos disponibles</label>
+                                </div>
+                                <div class="search-box position-relative">
+                                    <i class="bi bi-search"></i>
+                                    <input type="text" class="form-control" id="search-disponibles" placeholder="Buscar técnico...">
+                                </div>
+                                <select id="tecnicos-disponibles" class="form-select" size="10" multiple>
+                                    <!-- Técnicos se cargarán dinámicamente -->
+                                </select>
+                            </div>
+                            <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn btn-primary mb-2" onclick="agregarTecnico()" title="Agregar seleccionados">
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+                                <button class="btn btn-danger" onclick="quitarTecnico()" title="Quitar seleccionados">
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-5 tech-list-container">
+                                <span id="seleccionados-counter" class="tech-counter">0</span>
+                                <div class="tech-list-header">
+                                    <label class="tech-select-label">Técnicos seleccionados</label>
+                                </div>
+                                <div class="search-box position-relative">
+                                    <i class="bi bi-search"></i>
+                                    <input type="text" class="form-control" id="search-seleccionados" placeholder="Buscar técnico...">
+                                </div>
+                                <select id="tecnicos-seleccionados" class="form-select" size="10" multiple>
+                                    <!-- Técnicos seleccionados aparecerán aquí -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="tecnicos" name="tecnicos">
+                    <div class="form-text">Seleccione técnicos o use los botones de acción</div>
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" onclick="generarReporte()">
+                        <i class="bi bi-file-earmark-bar-graph me-2"></i>Generar Reporte
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="resultados" class="result-card"></div>
+    </div>
+
+    <div class="loading-overlay" id="loading">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-text">Procesando solicitud...</div>
+    </div>
+
+    <!-- Modal para tickets reabiertos -->
+    <div class="modal fade" id="ticketsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalTitle">Tickets Reabiertos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table" id="ticketsTable">
+                            <thead>
+                                <tr>
+                                    <th>Ticket</th>
+                                    <th>Fecha Reapertura</th>
+                                    <th>Fecha Apertura</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Mostrar fecha actual
+        const now = new Date();
+        document.getElementById('current-date').textContent = now.toLocaleDateString('es-ES', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Cargar técnicos al iniciar
+        $(document).ready(function() {
+            cargarTecnicos();
+            
+            // Configurar búsqueda en técnicos disponibles
+            $('#search-disponibles').on('keyup', function() {
+                const value = $(this).val().toLowerCase();
+                $('#tecnicos-disponibles option').filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            
+            // Configurar búsqueda en técnicos seleccionados
+            $('#search-seleccionados').on('keyup', function() {
+                const value = $(this).val().toLowerCase();
+                $('#tecnicos-seleccionados option').filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+        // Función para seleccionar todos los técnicos
+        function seleccionarTodos() {
+            const disponibles = $('#tecnicos-disponibles');
+            const seleccionados = $('#tecnicos-seleccionados');
+            
+            disponibles.find('option').each(function() {
+                const option = $(this).clone();
+                seleccionados.append(option);
+                $(this).remove();
+            });
+            
+            actualizarTecnicosHidden();
+            actualizarContadores();
+            mostrarAlerta('Todos los técnicos han sido seleccionados', 'success');
+        }
+
+        // Función para deseleccionar todos los técnicos
+        function deseleccionarTodos() {
+            const disponibles = $('#tecnicos-disponibles');
+            const seleccionados = $('#tecnicos-seleccionados');
+            
+            seleccionados.find('option').each(function() {
+                const option = $(this).clone();
+                disponibles.append(option);
+                $(this).remove();
+            });
+            
+            actualizarTecnicosHidden();
+            actualizarContadores();
+            mostrarAlerta('Se ha limpiado la selección de técnicos', 'info');
+        }
+
+        // Función para agregar técnicos seleccionados
+        function agregarTecnico() {
+            const disponibles = $('#tecnicos-disponibles');
+            const seleccionados = $('#tecnicos-seleccionados');
+            
+            if(disponibles.find('option:selected').length === 0) {
+                mostrarAlerta('Por favor seleccione al menos un técnico', 'warning');
+                return;
+            }
+            
+            disponibles.find('option:selected').each(function() {
+                const option = $(this).clone();
+                seleccionados.append(option);
+                $(this).remove();
+            });
+            
+            actualizarTecnicosHidden();
+            actualizarContadores();
+        }
+
+        // Función para quitar técnicos seleccionados
+        function quitarTecnico() {
+            const disponibles = $('#tecnicos-disponibles');
+            const seleccionados = $('#tecnicos-seleccionados');
+            
+            if(seleccionados.find('option:selected').length === 0) {
+                mostrarAlerta('Por favor seleccione al menos un técnico', 'warning');
+                return;
+            }
+            
+            seleccionados.find('option:selected').each(function() {
+                const option = $(this).clone();
+                disponibles.append(option);
+                $(this).remove();
+            });
+            
+            actualizarTecnicosHidden();
+            actualizarContadores();
+        }
+
+        // Función para actualizar el campo hidden con los técnicos seleccionados
+        function actualizarTecnicosHidden() {
+            const tecnicos = [];
+            $('#tecnicos-seleccionados option').each(function() {
+                tecnicos.push($(this).val());
+            });
+            $('#tecnicos').val(JSON.stringify(tecnicos));
+        }
+
+        // Función para actualizar los contadores
+        function actualizarContadores() {
+            const disponiblesCount = $('#tecnicos-disponibles option').length;
+            const seleccionadosCount = $('#tecnicos-seleccionados option').length;
+            
+            $('#disponibles-counter').text(disponiblesCount);
+            $('#seleccionados-counter').text(seleccionadosCount);
+        }
+
+        // Función para cargar los técnicos desde el servidor
+        function cargarTecnicos() {
+            $('#loading').show();
+            
+            $.ajax({
+                url: '/tecnicos/',
+                method: 'GET',
+                success: function(data) {
+                    const select = $('#tecnicos-disponibles');
+                    select.empty();
+                    
+                    data.tecnicos.forEach(t => {
+                        select.append(`<option value="${t}">${t}</option>`);
+                    });
+                    
+                    actualizarContadores();
+                },
+                error: function(xhr) {
+                    mostrarAlerta('Error al cargar técnicos: ' + xhr.responseJSON.error, 'danger');
+                },
+                complete: function() {
+                    $('#loading').hide();
+                }
+            });
+        }
+
+        // Función para generar el reporte
+        function generarReporte() {
+            const fecha_ini = $('#fecha_ini').val();
+            const fecha_fin = $('#fecha_fin').val();
+            const tecnicos = JSON.parse($('#tecnicos').val() || '[]');
+
+            if(!fecha_ini || !fecha_fin) {
+                mostrarAlerta('Por favor complete ambas fechas', 'warning');
+                return;
+            }
+
+            if(new Date(fecha_ini) > new Date(fecha_fin)) {
+                mostrarAlerta('La fecha de inicio no puede ser mayor a la fecha fin', 'warning');
+                return;
+            }
+
+            $('#loading').show();
+
+            $.ajax({
+                url: '/generar-reporte/',
+                method: 'POST',
+                data: {
+                    'fecha_ini': fecha_ini,
+                    'fecha_fin': fecha_fin,
+                    'tecnicos[]': tecnicos
+                },
+                success: function(data) {
+                    if(data.error) {
+                        mostrarAlerta('Error: ' + data.error, 'danger');
+                        return;
+                    }
+                    mostrarResultados(data.data);
+                },
+                error: function(xhr) {
+                    mostrarAlerta('Error: ' + xhr.responseJSON.error, 'danger');
+                },
+                complete: function() {
+                    $('#loading').hide();
+                }
+            });
+        }
+
+        // Función para mostrar los resultados
+        function mostrarResultados(data) {
+            if(data.length === 0) {
+                $('#resultados').html(`
+                    <div class="card empty-state">
+                        <div class="card-body">
+                            <i class="bi bi-database-exclamation"></i>
+                            <h4 class="mt-3">No se encontraron resultados</h4>
+                            <p class="text-muted">No hay datos disponibles para los criterios seleccionados</p>
+                        </div>
+                    </div>
+                `);
+                return;
+            }
+
+            let html = `
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0"><i class="bi bi-table me-2"></i>Resultados del Reporte</h4>
+                            <button class="btn btn-sm btn-light" onclick="exportarAExcel()">
+                                <i class="bi bi-file-excel me-1"></i>Exportar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Técnico</th>
+                                        <th class="text-center">Cerrados SLA</th>
+                                        <th class="text-center">Total SLA</th>
+                                        <th class="text-center">Pendientes</th>
+                                        <th class="text-center">Cumplimiento</th>
+                                        <th class="text-center">Total Cerrados</th>
+                                        <th class="text-center">Recibidos</th>
+                                        <th class="text-center">Reabiertos</th>
+                                        <th class="text-center">% Reabiertos</th>
+                                        <th class="text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+            
+            data.forEach(row => {
+                const cumplimiento = parseFloat(row['Cumplimiento SLA']) || 0;
+                const reabiertosPorc = parseFloat(row['Proporción Reabiertos/Cerrados (%)']) || 0;
+                
+                html += `
+                    <tr>
+                        <td><strong>${row.Tecnico_Asignado}</strong></td>
+                        <td class="text-center">${row.Cerrados_dentro_SLA}</td>
+                        <td class="text-center">${row.Cerrados_con_SLA}</td>
+                        <td class="text-center">${row.tickets_pendientes_SLA}</td>
+                        <td class="text-center">
+                            <span class="${cumplimiento >= 90 ? 'badge-sla' : 'badge-danger'}">
+                                ${cumplimiento}%
+                            </span>
+                        </td>
+                        <td class="text-center">${row.Cant_tickets_cerrados}</td>
+                        <td class="text-center">${row.Cant_tickets_recibidos}</td>
+                        <td class="text-center">${row.Reabiertos}</td>
+                        <td class="text-center">
+                            <span class="${reabiertosPorc <= 5 ? 'badge-sla' : 'badge-danger'}">
+                                ${reabiertosPorc}%
+                            </span>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-outline-primary" 
+                                onclick="verTicketsReabiertos('${row.Tecnico_Asignado}')"
+                                data-bs-toggle="tooltip" title="Ver tickets reabiertos">
+                                <i class="bi bi-list-ul"></i>
+                            </button>
+                        </td>
+                    </tr>`;
+            });
+            
+            html += `</tbody></table></div></div></div>`;
+            
+            $('#resultados').html(html);
+            
+            // Inicializar tooltips
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        }
+
+        // Función para ver tickets reabiertos
+        function verTicketsReabiertos(tecnico) {
+            const fecha_ini = $('#fecha_ini').val();
+            const fecha_fin = $('#fecha_fin').val();
+            
+            $('#loading').show();
+            
+            $.ajax({
+                url: '/tickets-reabiertos/',
+                method: 'POST',
+                data: {
+                    'tecnico': tecnico,
+                    'fecha_ini': fecha_ini,
+                    'fecha_fin': fecha_fin
+                },
+                success: function(data) {
+                    if(data.error) {
+                        mostrarAlerta('Error: ' + data.error, 'danger');
+                        return;
+                    }
+                    
+                    $('#modalTitle').text(`Tickets reabiertos - ${tecnico}`);
+                    const tbody = $('#ticketsTable tbody');
+                    tbody.empty();
+                    
+                    if(data.data.length === 0) {
+                        tbody.append(`
+                            <tr>
+                                <td colspan="4" class="text-center py-4 text-muted">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    No se encontraron tickets reabiertos
+                                </td>
+                            </tr>
+                        `);
+                    } else {
+                        data.data.forEach(ticket => {
+                            tbody.append(`
+                                <tr>
+                                    <td>${ticket.Nro_Ticket}</td>
+                                    <td>${ticket.Fecha_Reapertura}</td>
+                                    <td>${ticket.Fecha_Apertura}</td>
+                                    <td>
+                                        <a href="https://cs.intelix.biz/front/ticket.form.php?id=${ticket.Nro_Ticket}" 
+                                           target="_blank" 
+                                           class="btn btn-sm btn-outline-primary"
+                                           data-bs-toggle="tooltip" 
+                                           title="Abrir ticket en GLPI">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            `);
+                        });
+                    }
+                    
+                    const modal = new bootstrap.Modal(document.getElementById('ticketsModal'));
+                    modal.show();
+                },
+                error: function(xhr) {
+                    mostrarAlerta('Error: ' + xhr.responseJSON.error, 'danger');
+                },
+                complete: function() {
+                    $('#loading').hide();
+                }
+            });
+        }
+
+        // Función para exportar a Excel (placeholder)
+        function exportarAExcel() {
+            alert('Funcionalidad de exportación a Excel en desarrollo');
+        }
+
+        // Función para mostrar alertas
+        function mostrarAlerta(mensaje, tipo) {
+            const alerta = `
+                <div class="alert alert-${tipo} alert-dismissible fade show" role="alert">
+                    <i class="bi ${tipo === 'danger' ? 'bi-exclamation-triangle' : tipo === 'warning' ? 'bi-exclamation-circle' : tipo === 'success' ? 'bi-check-circle' : 'bi-info-circle'} me-2"></i>
+                    ${mensaje}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+            
+            $('#resultados').prepend(alerta);
+            
+            // Auto cerrar después de 5 segundos
+            setTimeout(() => {
+                $('.alert').alert('close');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
