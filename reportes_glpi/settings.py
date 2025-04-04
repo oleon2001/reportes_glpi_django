@@ -70,6 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'reportes_glpi.wsgi.application'
 
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -88,6 +89,7 @@ DATABASES = {
     }
 }
 
+#10.48.63.60'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
