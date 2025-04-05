@@ -20,11 +20,13 @@ def generar_reporte(request):
             data = request.POST
             fecha_ini = data.get('fecha_ini')
             fecha_fin = data.get('fecha_fin')
-            tecnicos = request.POST.getlist('tecnicos[]')  # Esto ya maneja arrays
-            
+            tecnicos = json.loads(data.get('tecnicos', '[]'))  # Parsear JSON
+
+
             # Si viene como string JSON (del nuevo enfoque)
             if len(tecnicos) == 1 and tecnicos[0].startswith('['):
                 tecnicos = json.loads(tecnicos[0])
+                print("Tecnicos JSON:", tecnicos)
 
             if not re.match(r'^\d{4}-\d{2}-\d{2}$', fecha_ini) or not re.match(r'^\d{4}-\d{2}-\d{2}$', fecha_fin):
                 return JsonResponse({'error': 'Formato de fecha inválido (YYYY-MM-DD)'}, status=400)

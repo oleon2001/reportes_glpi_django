@@ -498,9 +498,9 @@
         function actualizarTecnicosHidden() {
             const tecnicos = [];
             $('#tecnicos-seleccionados option').each(function() {
-                tecnicos.push($(this).val());
+                tecnicos.push($(this).val());  // Asegurar que se guardan valores únicos
             });
-            $('#tecnicos').val(JSON.stringify(tecnicos));
+            $('#tecnicos').val(JSON.stringify(tecnicos));  // Serializar a JSON
         }
 
         // Función para actualizar los contadores
@@ -542,13 +542,13 @@
         function generarReporte() {
             const fecha_ini = $('#fecha_ini').val();
             const fecha_fin = $('#fecha_fin').val();
-            let tecnicos = [];
-            
+            let tecnicos = []; // Usar 'let' en lugar de 'const'
             try {
                 tecnicos = JSON.parse($('#tecnicos').val() || '[]');
-            } catch (e) {
+            } catch(e) {
                 tecnicos = [];
             }
+            
 
             $('#loading').show();
 
@@ -561,7 +561,7 @@
                 data: {
                     'fecha_ini': fecha_ini,
                     'fecha_fin': fecha_fin,
-                    'tecnicos': tecnicos,
+                    'tecnicos': JSON.stringify(tecnicos),
                     'csrfmiddlewaretoken': '{{ csrf_token }}'  // O esta alternativa
                 },
                 success: function(data) {
@@ -704,6 +704,9 @@
             $.ajax({
                 url: '/tickets-reabiertos/',
                 method: 'POST',
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken")  // Añade esta línea
+                    },
                 data: {
                     'tecnico': tecnico,
                     'fecha_ini': fecha_ini,
