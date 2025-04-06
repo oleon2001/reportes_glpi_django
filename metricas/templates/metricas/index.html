@@ -542,51 +542,49 @@
         function generarReporte() {
             const fecha_ini = $('#fecha_ini').val();
             const fecha_fin = $('#fecha_fin').val();
-            let tecnicos = []; // Usar 'let' en lugar de 'const'
-            try {
-                tecnicos = JSON.parse($('#tecnicos').val() || '[]');
-            } catch(e) {
-                tecnicos = [];
-            }
+            const tecnicos = [];
             
-
+            $('#tecnicos-seleccionados option').each(function() {
+                tecnicos.push($(this).val());
+            });
+        
+            if (!fecha_ini || !fecha_fin) {
+                mostrarAlerta('Por favor seleccione ambas fechas', 'warning');
+                return;
+            }
+        
             $('#loading').show();
-
+        
             $.ajax({
                 url: '/generar-reporte/',
                 method: 'POST',
-                headers: {
-                    "X-CSRFToken": getCookie("csrftoken")  // Añade esto
-                },
-                data: {
+                contentType: 'application/json',
+                data: JSON.stringify({
                     'fecha_ini': fecha_ini,
                     'fecha_fin': fecha_fin,
-                    'tecnicos': JSON.stringify(tecnicos),
-                    'csrfmiddlewaretoken': '{{ csrf_token }}'  // O esta alternativa
+                    'tecnicos': tecnicos
+                }),
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken"),
+                    "X-Requested-With": "XMLHttpRequest"
                 },
                 success: function(data) {
-                    if(data && data.error) {
+                    if(data.error) {
                         mostrarAlerta('Error: ' + data.error, 'danger');
-                        return;
-                    }
-                    if(!data) {
-                        mostrarAlerta('Respuesta vacía del servidor', 'danger');
                         return;
                     }
                     mostrarResultados(data.data || data);
                 },
-                error: function(xhr, status, error) {
+                error: function(xhr) {
                     let errorMsg = 'Error al conectar con el servidor';
                     try {
-                        if(xhr.responseText) {
-                            const response = JSON.parse(xhr.responseText);
-                            errorMsg = response.error || xhr.statusText;
+                        if(xhr.responseJSON && xhr.responseJSON.error) {
+                            errorMsg = xhr.responseJSON.error;
                         }
                     } catch(e) {
-                        errorMsg = xhr.statusText || error;
+                        errorMsg = xhr.statusText;
                     }
                     mostrarAlerta(errorMsg, 'danger');
-                    console.error('Detalles del error:', status, error, xhr);
                 },
                 complete: function() {
                     $('#loading').hide();
