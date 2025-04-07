@@ -1,6 +1,5 @@
 import mysql.connector
 import pandas as pd
-import re
 from django.conf import settings
 
 class DatabaseConnector:
@@ -30,10 +29,17 @@ class ReportGenerator:
         conn = DatabaseConnector.get_connection()
         cursor = conn.cursor()
 
+        # Construcción segura de la condición de técnicos
         tecnicos_condicion = ""
+        params_tecnicos = []
         if tecnicos:
-            tecnicos_str = "', '".join(tecnicos)
-            tecnicos_condicion = f"AND CONCAT(gu.realname, ' ', gu.firstname) IN ('{tecnicos_str}')"
+            placeholders = ', '.join(['%s'] * len(tecnicos))
+            tecnicos_condicion = f"AND CONCAT(gu.realname, ' ', gu.firstname) IN ({placeholders})"
+            params_tecnicos = tecnicos.copy()
+
+        # Contar correctamente las subconsultas que usan la condición (5 veces)
+        num_condiciones = 5  # ¡Corregido de 6 a 5!
+        params_tecnicos_repetidos = params_tecnicos * num_condiciones
 
         query = f"""
             SELECT
@@ -161,17 +167,34 @@ class ReportGenerator:
             ORDER BY recibidos.tecnico_asignado;
         """
 
-        params = (
+        # Parámetros en el orden CORRECTO (técnicos intercalados)
+        params = [
+            # Primer bloque (recibidos)
+            f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
+            *params_tecnicos,
+            
+            # Segundo bloque (cerrados_count)
             f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
             f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
+            *params_tecnicos,
+            
+            # Tercer bloque (cerrados_sla)
             f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
             f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
+            *params_tecnicos,
+            
+            # Cuarto bloque (reabiertos)
             f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
-            f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
+            *params_tecnicos,
+            
+            # Quinto bloque (pendientes_sla)
             fecha_fin, fecha_fin,
-            f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59'
-        )
-
+            f'{fecha_ini} 00:00:00', f'{fecha_fin} 23:59:59',
+            *params_tecnicos,
+        ]
+        
+        #params = params_tecnicos_repetidos + params_fechas
+        
         cursor.execute(query, params)
         resultados = cursor.fetchall()
         
@@ -180,7 +203,7 @@ class ReportGenerator:
             "tickets_pendientes_SLA", "Cumplimiento SLA", "Cant_tickets_cerrados",
             "Cant_tickets_recibidos", "Reabiertos", "Proporción Reabiertos/Cerrados (%)"
         ])
-        
+
         cursor.close()
         conn.close()
         return df.to_dict(orient='records')

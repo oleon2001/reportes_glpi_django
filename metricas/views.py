@@ -17,23 +17,26 @@ def obtener_tecnicos(request):
 def generar_reporte(request):
     if request.method == 'POST':
         try:
-            data = request.POST
+            data = json.loads(request.body) if request.body else request.POST
             fecha_ini = data.get('fecha_ini')
             fecha_fin = data.get('fecha_fin')
-            tecnicos = json.loads(data.get('tecnicos', '[]'))  # Parsear JSON
-
-
-            # Si viene como string JSON (del nuevo enfoque)
-            if len(tecnicos) == 1 and tecnicos[0].startswith('['):
-                tecnicos = json.loads(tecnicos[0])
-                print("Tecnicos JSON:", tecnicos)
-
+            
+            # Manejar diferentes formatos de técnicos
+            tecnicos = data.get('tecnicos', '[]')
+            if isinstance(tecnicos, str):
+                tecnicos = json.loads(data.get('tecnicos', '[]'))
+                if isinstance(tecnicos, str):  # Por si llega como string
+                    tecnicos = json.loads(tecnicos)
+            
+            # Validar fechas
             if not re.match(r'^\d{4}-\d{2}-\d{2}$', fecha_ini) or not re.match(r'^\d{4}-\d{2}-\d{2}$', fecha_fin):
                 return JsonResponse({'error': 'Formato de fecha inválido (YYYY-MM-DD)'}, status=400)
 
             resultados = ReportGenerator.generar_reporte_principal(fecha_ini, fecha_fin, tecnicos)
             return JsonResponse({'data': resultados})
             
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Formato de datos inválido'}, status=400)
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
     return JsonResponse({'error': 'Método no permitido'}, status=405)
