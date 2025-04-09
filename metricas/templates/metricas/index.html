@@ -389,6 +389,7 @@
         </div>
     </div>
 
+    <input type="hidden" id="csrf_token" value="{% csrf_token %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -542,19 +543,22 @@
         function generarReporte() {
             const fecha_ini = $('#fecha_ini').val();
             const fecha_fin = $('#fecha_fin').val();
+            const seleccionarTodos = $('#tecnicos-disponibles option').length === 0; // Si no hay técnicos disponibles, selecciona todos
             const tecnicos = [];
-            
-            $('#tecnicos-seleccionados option').each(function() {
-                tecnicos.push($(this).val());
-            });
-        
+
+            if (!seleccionarTodos) {
+                $('#tecnicos-seleccionados option').each(function() {
+                    tecnicos.push($(this).val());
+                });
+            }
+
             if (!fecha_ini || !fecha_fin) {
                 mostrarAlerta('Por favor seleccione ambas fechas', 'warning');
                 return;
             }
-        
+
             $('#loading').show();
-        
+
             $.ajax({
                 url: '/generar-reporte/',
                 method: 'POST',
@@ -562,14 +566,15 @@
                 data: JSON.stringify({
                     'fecha_ini': fecha_ini,
                     'fecha_fin': fecha_fin,
-                    'tecnicos': tecnicos
+                    'tecnicos': tecnicos,
+                    'seleccionar_todos': seleccionarTodos
                 }),
                 headers: {
                     "X-CSRFToken": getCookie("csrftoken"),
                     "X-Requested-With": "XMLHttpRequest"
                 },
                 success: function(data) {
-                    if(data.error) {
+                    if (data.error) {
                         mostrarAlerta('Error: ' + data.error, 'danger');
                         return;
                     }
@@ -578,10 +583,10 @@
                 error: function(xhr) {
                     let errorMsg = 'Error al conectar con el servidor';
                     try {
-                        if(xhr.responseJSON && xhr.responseJSON.error) {
+                        if (xhr.responseJSON && xhr.responseJSON.error) {
                             errorMsg = xhr.responseJSON.error;
                         }
-                    } catch(e) {
+                    } catch (e) {
                         errorMsg = xhr.statusText;
                     }
                     mostrarAlerta(errorMsg, 'danger');
@@ -591,7 +596,6 @@
                 }
             });
         }
-        
 
         function getCookie(name) {
             let cookieValue = null;
@@ -784,6 +788,31 @@
                 $('.alert').alert('close');
             }, 5000);
         }
+
+        // Función para obtener el token CSRF desde las cookies
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        // Configurar el token CSRF en todas las solicitudes AJAX
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!/^http(s)?:/.test(settings.url)) { // Ignorar URLs externas
+                    xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                }
+            }
+        });
     </script>
 </body>
 </html>

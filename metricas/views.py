@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .services import ReportGenerator
 import re
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
     return render(request, 'metricas/index.html')
@@ -21,13 +22,14 @@ def generar_reporte(request):
             fecha_ini = data.get('fecha_ini')
             fecha_fin = data.get('fecha_fin')
             
-            # Manejar diferentes formatos de técnicos
-            tecnicos = data.get('tecnicos', '[]')
-            if isinstance(tecnicos, str):
-                tecnicos = json.loads(data.get('tecnicos', '[]'))
-                if isinstance(tecnicos, str):  # Por si llega como string
+            # Manejar la selección de todos los técnicos
+            if data.get('seleccionar_todos', False):
+                tecnicos = ReportGenerator.obtener_tecnicos()
+            else:
+                tecnicos = data.get('tecnicos', '[]')
+                if isinstance(tecnicos, str):
                     tecnicos = json.loads(tecnicos)
-            
+
             # Validar fechas
             if not re.match(r'^\d{4}-\d{2}-\d{2}$', fecha_ini) or not re.match(r'^\d{4}-\d{2}-\d{2}$', fecha_fin):
                 return JsonResponse({'error': 'Formato de fecha inválido (YYYY-MM-DD)'}, status=400)

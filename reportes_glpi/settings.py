@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-mm0s*))95%$x()4f7w*a3u46e!1_y*d18t^nb!vdp9^(kqsk*^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -72,6 +72,9 @@ WSGI_APPLICATION = 'reportes_glpi.wsgi.application'
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
 
+# Aumenta el límite de datos enviados al servidor
+DATA_UPLOAD_MAX_MEMORY_SIZE = 17485760  # 10 MB
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -109,12 +112,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8080']  # Añade tu dominio
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:8000',
+    'http://10.1.10.90:8000',  # Incluye este dominio si accedes desde aquí
+]
+
 CORS_ALLOWED_ORIGINS = ['*',
     "http://127.0.0.1:8080",
 ]
 
-
+CSRF_COOKIE_SECURE = False  # Asegúrate de que esté desactivado en desarrollo
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
