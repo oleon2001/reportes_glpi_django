@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'reportes_glpi.wsgi.application'
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
 
 # Aumenta el límite de datos enviados al servidor
-DATA_UPLOAD_MAX_MEMORY_SIZE = 17485760  # 10 MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 20485760  # 10 MB
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
