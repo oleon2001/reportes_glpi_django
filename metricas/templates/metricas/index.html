@@ -75,12 +75,99 @@
             height: 100%;
             background-color: rgba(255, 255, 255, 0.9);
             z-index: 9999;
+<<<<<<< Updated upstream
+=======
+            display: none;
+            backdrop-filter: blur(8px);
+        }
+        
+        .loading-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            padding: 2.5rem;
+            /*box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);*/
+>>>>>>> Stashed changes
             display: flex;
             justify-content: center;
+<<<<<<< Updated upstream
             align-items: center;
             flex-direction: column;
             backdrop-filter: blur(3px);
             display: none;
+=======
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 0.4s ease-out;
+            /*border: 1px solid rgba(42, 157, 143, 0.1);*/
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+        
+        .spinner-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .spinner-border {
+            width: 100% !important;
+            height: 100% !important;
+            border-width: 0.25rem;
+            color: var(--color-primary);
+            animation: spin 1.2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .spinner-container::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background-color: rgba(42, 157, 143, 0.1);
+            animation: pulse 2s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+>>>>>>> Stashed changes
         }
         
         .spinner-text {
@@ -230,18 +317,26 @@
 
         .tech-counter {
             position: absolute;
-            top: -10px;
+            top: 5px;
             right: 10px;
             background: var(--color-primary);
             color: white;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            display: flex;
+            border-radius: 12px;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
-            font-weight: bold;
+            min-width: 20px;
+            height: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .tech-counter:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
         }
 
         .tech-list-header {
