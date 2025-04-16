@@ -765,3 +765,213 @@ INFO 2025-04-16 19:40:34,902 context_processors 12505 139749651502656 Generated 
 INFO 2025-04-16 19:40:34,904 basehttp 12505 139749651502656 "GET / HTTP/1.1" 200 32541
 INFO 2025-04-16 19:40:35,826 basehttp 12505 139749651502656 "GET /tecnicos/ HTTP/1.1" 200 406425
 INFO 2025-04-16 19:40:59,491 basehttp 12505 139749651502656 "POST /generar-reporte/ HTTP/1.1" 200 60460
+INFO 2025-04-16 19:48:27,525 autoreload 14894 139969908597952 Watching for file changes with StatReloader
+INFO 2025-04-16 19:48:30,736 context_processors 14894 139969228056128 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:48:31,047 context_processors 14894 139969228056128 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:48:31,047 context_processors 14894 139969228056128 Generated initial: L
+INFO 2025-04-16 19:48:31,053 basehttp 14894 139969228056128 "GET / HTTP/1.1" 200 32810
+INFO 2025-04-16 19:48:35,953 basehttp 14894 139969228056128 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:48:37,826 basehttp 14894 139969228056128 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:48:37,836 context_processors 14894 139969228056128 User not authenticated
+INFO 2025-04-16 19:48:37,845 basehttp 14894 139969228056128 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:48:39,471 auth_backend 14894 139969228056128 Successful authentication for user: 28492679
+INFO 2025-04-16 19:48:39,472 auth_backend 14894 139969228056128 Existing Django user found: 28492679
+INFO 2025-04-16 19:48:39,734 basehttp 14894 139969228056128 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:48:39,748 context_processors 14894 139969228056128 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:48:40,058 context_processors 14894 139969228056128 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:48:40,058 context_processors 14894 139969228056128 Generated initial: L
+INFO 2025-04-16 19:48:40,060 basehttp 14894 139969228056128 "GET / HTTP/1.1" 200 32810
+INFO 2025-04-16 19:48:40,794 basehttp 14894 139969228056128 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:49:12,432 basehttp 14894 139969228056128 "POST /generar-reporte/ HTTP/1.1" 200 60464
+INFO 2025-04-16 19:50:37,318 basehttp 14894 139969228056128 "POST /tickets-reabiertos/ HTTP/1.1" 200 156
+INFO 2025-04-16 19:50:55,528 context_processors 14894 139969228056128 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:50:55,829 context_processors 14894 139969228056128 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:50:55,829 context_processors 14894 139969228056128 Generated initial: L
+INFO 2025-04-16 19:50:55,832 basehttp 14894 139969228056128 "GET / HTTP/1.1" 200 32810
+INFO 2025-04-16 19:50:56,558 basehttp 14894 139969228056128 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:51:10,228 basehttp 14894 139969228056128 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:51:10,233 context_processors 14894 139969228056128 User not authenticated
+INFO 2025-04-16 19:51:10,235 basehttp 14894 139969228056128 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:51:12,318 auth_backend 14894 139969228056128 Successful authentication for user: 28492679
+INFO 2025-04-16 19:51:12,319 auth_backend 14894 139969228056128 Existing Django user found: 28492679
+INFO 2025-04-16 19:51:12,612 basehttp 14894 139969228056128 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:51:12,626 context_processors 14894 139969228056128 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:51:12,934 context_processors 14894 139969228056128 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:51:12,934 context_processors 14894 139969228056128 Generated initial: L
+INFO 2025-04-16 19:51:12,937 basehttp 14894 139969228056128 "GET / HTTP/1.1" 200 32810
+INFO 2025-04-16 19:51:13,727 basehttp 14894 139969228056128 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:51:29,039 context_processors 14894 139969228056128 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:51:29,338 context_processors 14894 139969228056128 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:51:29,339 context_processors 14894 139969228056128 Generated initial: L
+INFO 2025-04-16 19:51:29,341 basehttp 14894 139969228056128 "GET / HTTP/1.1" 200 32810
+INFO 2025-04-16 19:51:30,072 basehttp 14894 139969228056128 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:53:12,145 context_processors 14894 139969228056128 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:53:12,447 context_processors 14894 139969228056128 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:53:12,448 context_processors 14894 139969228056128 Generated initial: L
+INFO 2025-04-16 19:53:12,450 basehttp 14894 139969228056128 "GET / HTTP/1.1" 200 33599
+INFO 2025-04-16 19:53:13,191 basehttp 14894 139969228056128 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:53:17,828 basehttp 14894 139969228056128 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:53:17,837 context_processors 14894 139969228056128 User not authenticated
+INFO 2025-04-16 19:53:17,842 basehttp 14894 139969228056128 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:53:19,729 auth_backend 14894 139969228056128 Successful authentication for user: 28492679
+INFO 2025-04-16 19:53:19,730 auth_backend 14894 139969228056128 Existing Django user found: 28492679
+INFO 2025-04-16 19:53:20,211 basehttp 14894 139969228056128 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:53:20,215 context_processors 14894 139969228056128 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:53:20,515 context_processors 14894 139969228056128 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:53:20,516 context_processors 14894 139969228056128 Generated initial: L
+INFO 2025-04-16 19:53:20,518 basehttp 14894 139969228056128 "GET / HTTP/1.1" 200 33599
+INFO 2025-04-16 19:53:21,292 basehttp 14894 139969228056128 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:53:35,539 basehttp 14894 139969228056128 "POST /generar-reporte/ HTTP/1.1" 200 49400
+INFO 2025-04-16 19:56:22,787 autoreload 14894 139969908597952 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 19:56:23,060 autoreload 15832 139711518934208 Watching for file changes with StatReloader
+INFO 2025-04-16 19:56:27,501 autoreload 15832 139711518934208 /home/oleon/Escritorio/reportes_glpi_django/metricas/urls.py changed, reloading.
+INFO 2025-04-16 19:56:27,780 autoreload 15864 140385288119488 Watching for file changes with StatReloader
+INFO 2025-04-16 19:57:33,321 context_processors 15864 140384607536704 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:57:33,631 context_processors 15864 140384607536704 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:57:33,632 context_processors 15864 140384607536704 Generated initial: L
+INFO 2025-04-16 19:57:33,649 basehttp 15864 140384607536704 "GET / HTTP/1.1" 200 36065
+INFO 2025-04-16 19:57:34,542 basehttp 15864 140384607536704 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 19:57:44,378 basehttp 15864 140384607536704 "POST /generar-reporte/ HTTP/1.1" 200 49400
+WARNING 2025-04-16 19:57:49,782 log 15864 140384607536704 Bad Request: /exportar-excel/
+WARNING 2025-04-16 19:57:49,783 basehttp 15864 140384607536704 "POST /exportar-excel/ HTTP/1.1" 400 43
+WARNING 2025-04-16 19:57:53,677 log 15864 140384607536704 Bad Request: /exportar-excel/
+WARNING 2025-04-16 19:57:53,678 basehttp 15864 140384607536704 "POST /exportar-excel/ HTTP/1.1" 400 43
+INFO 2025-04-16 19:58:25,631 basehttp 15864 140384607536704 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:58:25,639 context_processors 15864 140384607536704 User not authenticated
+INFO 2025-04-16 19:58:25,643 basehttp 15864 140384607536704 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:58:32,591 auth_backend 15864 140384607536704 Successful authentication for user: 28492679
+INFO 2025-04-16 19:58:32,592 auth_backend 15864 140384607536704 Existing Django user found: 28492679
+INFO 2025-04-16 19:58:32,984 basehttp 15864 140384607536704 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:58:32,988 context_processors 15864 140384607536704 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:58:33,287 context_processors 15864 140384607536704 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:58:33,287 context_processors 15864 140384607536704 Generated initial: L
+INFO 2025-04-16 19:58:33,288 basehttp 15864 140384607536704 "GET / HTTP/1.1" 200 36065
+INFO 2025-04-16 19:58:34,034 basehttp 15864 140384607536704 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 19:58:40,424 autoreload 15864 140385288119488 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 19:58:40,720 autoreload 16389 140627223389376 Watching for file changes with StatReloader
+INFO 2025-04-16 19:59:06,028 autoreload 16457 140003229603008 Watching for file changes with StatReloader
+INFO 2025-04-16 19:59:19,341 autoreload 16706 139731607090368 Watching for file changes with StatReloader
+INFO 2025-04-16 19:59:21,530 context_processors 16706 139730926511680 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:59:21,843 context_processors 16706 139730926511680 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:59:21,844 context_processors 16706 139730926511680 Generated initial: L
+INFO 2025-04-16 19:59:21,850 basehttp 16706 139730926511680 "GET / HTTP/1.1" 200 36098
+INFO 2025-04-16 19:59:22,558 basehttp 16706 139730926511680 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 19:59:26,942 basehttp 16706 139730926511680 "POST /generar-reporte/ HTTP/1.1" 200 49397
+INFO 2025-04-16 19:59:29,570 basehttp 16706 139730926511680 "POST /exportar-excel/ HTTP/1.1" 200 14716
+INFO 2025-04-16 20:00:18,874 basehttp 16706 139730926511680 "POST /exportar-excel/ HTTP/1.1" 200 14715
+INFO 2025-04-16 20:00:56,532 autoreload 16706 139731607090368 /home/oleon/Escritorio/reportes_glpi_django/metricas/urls.py changed, reloading.
+INFO 2025-04-16 20:00:56,828 autoreload 16916 139740608890048 Watching for file changes with StatReloader
+INFO 2025-04-16 20:01:39,701 autoreload 16916 139740608890048 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 20:01:39,981 autoreload 17031 140498392560832 Watching for file changes with StatReloader
+INFO 2025-04-16 20:01:42,412 basehttp 17031 140497712019008 "POST /exportar-excel/ HTTP/1.1" 200 14707
+INFO 2025-04-16 20:02:16,068 autoreload 17325 140641057993920 Watching for file changes with StatReloader
+INFO 2025-04-16 20:02:23,809 context_processors 17325 140640377472576 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:02:24,113 context_processors 17325 140640377472576 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:02:24,114 context_processors 17325 140640377472576 Generated initial: L
+INFO 2025-04-16 20:02:24,133 basehttp 17325 140640377472576 "GET / HTTP/1.1" 200 38136
+INFO 2025-04-16 20:02:24,874 basehttp 17325 140640377472576 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:02:26,098 basehttp 17325 140640377472576 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:02:26,109 context_processors 17325 140640377472576 User not authenticated
+INFO 2025-04-16 20:02:26,119 basehttp 17325 140640377472576 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 20:02:28,283 auth_backend 17325 140640377472576 Successful authentication for user: 28492679
+INFO 2025-04-16 20:02:28,284 auth_backend 17325 140640377472576 Existing Django user found: 28492679
+INFO 2025-04-16 20:02:28,556 basehttp 17325 140640377472576 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:02:28,569 context_processors 17325 140640377472576 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:02:29,224 context_processors 17325 140640377472576 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:02:29,224 context_processors 17325 140640377472576 Generated initial: L
+INFO 2025-04-16 20:02:29,227 basehttp 17325 140640377472576 "GET / HTTP/1.1" 200 38136
+INFO 2025-04-16 20:02:30,170 basehttp 17325 140640377472576 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:02:53,296 basehttp 17325 140640377472576 "POST /generar-reporte/ HTTP/1.1" 200 49398
+INFO 2025-04-16 20:03:04,411 basehttp 17325 140640377472576 "POST /tickets-reabiertos/ HTTP/1.1" 200 300
+INFO 2025-04-16 20:03:45,674 basehttp 17325 140640377472576 "POST /exportar-pdf/ HTTP/1.1" 200 20177
+INFO 2025-04-16 20:06:29,273 autoreload 17325 140641057993920 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 20:06:29,595 autoreload 18072 140440362443968 Watching for file changes with StatReloader
+INFO 2025-04-16 20:07:21,552 autoreload 18214 139652166583488 Watching for file changes with StatReloader
+INFO 2025-04-16 20:07:24,250 context_processors 18214 139651486025280 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:07:24,553 context_processors 18214 139651486025280 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:07:24,553 context_processors 18214 139651486025280 Generated initial: L
+INFO 2025-04-16 20:07:24,567 basehttp 18214 139651486025280 "GET / HTTP/1.1" 200 42943
+INFO 2025-04-16 20:07:25,409 basehttp 18214 139651486025280 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:07:34,625 basehttp 18214 139651486025280 "POST /generar-reporte/ HTTP/1.1" 200 49397
+INFO 2025-04-16 20:07:59,874 basehttp 18214 139651486025280 "POST /exportar-csv/ HTTP/1.1" 200 9832
+WARNING 2025-04-16 20:08:52,134 log 18214 139651486025280 Not Found: /exportar-pdf-portrait/
+WARNING 2025-04-16 20:08:52,135 basehttp 18214 139651486025280 "POST /exportar-pdf-portrait/ HTTP/1.1" 404 4628
+WARNING 2025-04-16 20:08:58,224 log 18214 139651486025280 Not Found: /exportar-pdf-landscape/
+WARNING 2025-04-16 20:08:58,225 basehttp 18214 139651486025280 "POST /exportar-pdf-landscape/ HTTP/1.1" 404 4631
+INFO 2025-04-16 20:09:43,495 autoreload 18214 139652166583488 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 20:09:43,811 autoreload 18677 140649068270784 Watching for file changes with StatReloader
+INFO 2025-04-16 20:09:50,018 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:09:50,327 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:09:50,327 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:09:50,335 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 33599
+INFO 2025-04-16 20:09:51,107 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:10:28,219 basehttp 18677 140648387671616 "POST /generar-reporte/ HTTP/1.1" 200 49397
+INFO 2025-04-16 20:13:30,760 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:13:31,062 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:13:31,062 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:13:31,065 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 37846
+INFO 2025-04-16 20:13:32,118 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:13:37,471 basehttp 18677 140648387671616 "POST /generar-reporte/ HTTP/1.1" 200 49399
+INFO 2025-04-16 20:16:36,680 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:16:36,983 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:16:36,983 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:16:36,985 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 39083
+INFO 2025-04-16 20:16:37,798 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:16:41,829 basehttp 18677 140648387671616 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:16:41,832 context_processors 18677 140648387671616 User not authenticated
+INFO 2025-04-16 20:16:41,834 basehttp 18677 140648387671616 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 20:16:46,174 auth_backend 18677 140648387671616 Successful authentication for user: 28492679
+INFO 2025-04-16 20:16:46,175 auth_backend 18677 140648387671616 Existing Django user found: 28492679
+INFO 2025-04-16 20:16:46,805 basehttp 18677 140648387671616 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:16:46,810 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:16:47,111 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:16:47,112 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:16:47,114 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 39083
+INFO 2025-04-16 20:16:47,946 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:16:52,037 basehttp 18677 140648387671616 "POST /generar-reporte/ HTTP/1.1" 200 49399
+INFO 2025-04-16 20:18:59,734 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:19:00,039 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:19:00,039 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:19:00,042 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 40609
+INFO 2025-04-16 20:19:00,972 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:19:28,290 basehttp 18677 140648387671616 "POST /generar-reporte/ HTTP/1.1" 200 49399
+INFO 2025-04-16 20:21:25,964 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:21:26,269 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:21:26,269 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:21:26,271 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 40747
+INFO 2025-04-16 20:21:27,087 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:21:42,812 basehttp 18677 140648387671616 "POST /generar-reporte/ HTTP/1.1" 200 49399
+INFO 2025-04-16 20:23:57,195 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:23:57,496 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:23:57,497 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:23:57,497 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 40747
+INFO 2025-04-16 20:23:58,309 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:24:02,782 basehttp 18677 140648387671616 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:24:02,792 context_processors 18677 140648387671616 User not authenticated
+INFO 2025-04-16 20:24:02,800 basehttp 18677 140648387671616 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 20:24:06,388 auth_backend 18677 140648387671616 Successful authentication for user: 28492679
+INFO 2025-04-16 20:24:06,389 auth_backend 18677 140648387671616 Existing Django user found: 28492679
+INFO 2025-04-16 20:24:06,665 basehttp 18677 140648387671616 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:24:06,679 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:24:06,981 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:24:06,981 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:24:06,983 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 40747
+INFO 2025-04-16 20:24:07,922 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:25:06,115 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:25:06,418 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:25:06,418 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:25:06,421 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 41228
+INFO 2025-04-16 20:25:07,446 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:25:11,592 basehttp 18677 140648387671616 "POST /generar-reporte/ HTTP/1.1" 200 49400
+INFO 2025-04-16 20:25:55,529 basehttp 18677 140648387671616 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:25:55,539 context_processors 18677 140648387671616 User not authenticated
+INFO 2025-04-16 20:25:55,545 basehttp 18677 140648387671616 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 20:25:57,319 auth_backend 18677 140648387671616 Successful authentication for user: 28492679
+INFO 2025-04-16 20:25:57,320 auth_backend 18677 140648387671616 Existing Django user found: 28492679
+INFO 2025-04-16 20:25:57,650 basehttp 18677 140648387671616 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 20:25:57,663 context_processors 18677 140648387671616 Processing user_initial for user: 28492679
+INFO 2025-04-16 20:25:57,965 context_processors 18677 140648387671616 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 20:25:57,965 context_processors 18677 140648387671616 Generated initial: L
+INFO 2025-04-16 20:25:57,966 basehttp 18677 140648387671616 "GET / HTTP/1.1" 200 41228
+INFO 2025-04-16 20:25:58,769 basehttp 18677 140648387671616 "GET /tecnicos/ HTTP/1.1" 200 406439
+INFO 2025-04-16 20:26:13,657 basehttp 18677 140648387671616 "POST /generar-reporte/ HTTP/1.1" 200 49400

@@ -7,6 +7,10 @@
     <title>Reportes GLPI - Métricas de Técnicos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Agregar librerías para exportación -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <style>
         :root {
             --color-primary: #2A9D8F;
@@ -75,99 +79,12 @@
             height: 100%;
             background-color: rgba(255, 255, 255, 0.9);
             z-index: 9999;
-<<<<<<< Updated upstream
-=======
-            display: none;
-            backdrop-filter: blur(8px);
-        }
-        
-        .loading-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgb(255, 255, 255);
-            border-radius: 20px;
-            padding: 2.5rem;
-            /*box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);*/
->>>>>>> Stashed changes
             display: flex;
             justify-content: center;
-<<<<<<< Updated upstream
             align-items: center;
             flex-direction: column;
             backdrop-filter: blur(3px);
             display: none;
-=======
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            animation: fadeIn 0.4s ease-out;
-            /*border: 1px solid rgba(42, 157, 143, 0.1);*/
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -60%);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
-        }
-        
-        .spinner-container {
-            position: relative;
-            width: 80px;
-            height: 80px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .spinner-border {
-            width: 100% !important;
-            height: 100% !important;
-            border-width: 0.25rem;
-            color: var(--color-primary);
-            animation: spin 1.2s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        .spinner-container::after {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 50%;
-            background-color: rgba(42, 157, 143, 0.1);
-            animation: pulse 2s ease-in-out infinite;
-            z-index: -1;
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(0.95);
-                opacity: 0.5;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.8;
-            }
-            100% {
-                transform: scale(0.95);
-                opacity: 0.5;
-            }
->>>>>>> Stashed changes
         }
         
         .spinner-text {
@@ -502,8 +419,25 @@
             day: 'numeric'
         });
 
+        function establecerFechasPorDefecto() {
+            const today = new Date();
+            const firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+            const lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+            
+            const formatDate = (date) => {
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            };
+            
+            document.getElementById('fecha_ini').value = formatDate(firstDay);
+            document.getElementById('fecha_fin').value = formatDate(lastDay);
+        }
+
         // Cargar técnicos al iniciar
         $(document).ready(function() {
+            establecerFechasPorDefecto();
             cargarTecnicos();
             
             // Configurar búsqueda en técnicos disponibles
@@ -731,9 +665,17 @@
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center">
                             <h4 class="mb-0"><i class="bi bi-table me-2"></i>Resultados del Reporte</h4>
-                            <button class="btn btn-sm btn-light" onclick="exportarAExcel()">
-                                <i class="bi bi-file-excel me-1"></i>Exportar
-                            </button>
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-light" onclick="exportarAExcel()">
+                                    <i class="bi bi-file-excel me-1"></i>Excel
+                                </button>
+                                <button class="btn btn-sm btn-light" onclick="exportarAPDF()">
+                                    <i class="bi bi-file-pdf me-1"></i>PDF
+                                </button>
+                                <button class="btn btn-sm btn-light" onclick="exportarACSV()">
+                                    <i class="bi bi-file-text me-1"></i>CSV
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -866,9 +808,170 @@
             });
         }
 
-        // Función para exportar a Excel (placeholder)
+        // Función para exportar a Excel
         function exportarAExcel() {
-            alert('Funcionalidad de exportación a Excel en desarrollo');
+            const fecha_ini = $('#fecha_ini').val();
+            const fecha_fin = $('#fecha_fin').val();
+            const filename = `Reporte_Metricas_${fecha_ini}_${fecha_fin}.xlsx`;
+            
+            // Obtener los datos de la tabla
+            const table = document.querySelector('#resultados table');
+            const ws = XLSX.utils.table_to_sheet(table);
+            
+            // Configurar estilos para Excel
+            const wb = XLSX.utils.book_new();
+            
+            // Ajustar el ancho de las columnas y establecer estilos
+            const columnWidths = [
+                {wch: 30}, // Técnico
+                {wch: 15}, // Cerrados SLA
+                {wch: 15}, // Total SLA
+                {wch: 15}, // Pendientes
+                {wch: 15}, // Cumplimiento
+                {wch: 15}, // Total Cerrados
+                {wch: 15}, // Recibidos
+                {wch: 15}, // Reabiertos
+                {wch: 15}, // % Reabiertos
+                {wch: 15}  // Acciones
+            ];
+            
+            ws['!cols'] = columnWidths;
+
+            // Aplicar fondo gris claro a filas alternas
+            const range = XLSX.utils.decode_range(ws['!ref']);
+            for (let row = range.s.r + 1; row <= range.e.r; row++) { // Empezar después del encabezado
+                if (row % 2 === 1) { // Filas alternas
+                    for (let col = range.s.c; col <= range.e.c; col++) {
+                        const cellRef = XLSX.utils.encode_cell({r: row, c: col});
+                        if (!ws[cellRef]) ws[cellRef] = {};
+                        if (!ws[cellRef].s) ws[cellRef].s = {};
+                        ws[cellRef].s.fill = {
+                            fgColor: {rgb: "F5F5F5"}, // Gris muy claro
+                            patternType: "solid"
+                        };
+                    }
+                }
+            }
+            
+            // Agregar hoja al libro
+            XLSX.utils.book_append_sheet(wb, ws, "Reporte");
+            
+            // Guardar archivo
+            XLSX.writeFile(wb, filename);
+        }
+
+        // Función para exportar a PDF
+        function exportarAPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF('l', 'pt', 'a3');
+            const fecha_ini = $('#fecha_ini').val();
+            const fecha_fin = $('#fecha_fin').val();
+            
+            // Configurar el título con color más oscuro
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(24);
+            doc.text('Reporte de Indicadores de Rendimiento', 40, 50);
+            doc.setFontSize(16);
+            doc.text(`Rango de fechas: ${fecha_ini} a ${fecha_fin}`, 40, 80);
+            
+            // Exportar tabla con colores más oscuros
+            doc.autoTable({
+                html: '#resultados table',
+                startY: 100,
+                styles: {
+                    fontSize: 12,
+                    cellPadding: 4,
+                    overflow: 'linebreak',
+                    halign: 'center',
+                    font: 'helvetica',
+                    textColor: [0, 0, 0],
+                    fontStyle: 'normal',
+                    lineWidth: 0.5,
+                    lineColor: [80, 80, 80]
+                },
+                columnStyles: {
+                    0: { 
+                        halign: 'left', 
+                        cellWidth: 150,
+                        fontStyle: 'bold'
+                    },
+                    4: { 
+                        cellWidth: 80,
+                        fontStyle: 'bold'
+                    },
+                    8: { 
+                        cellWidth: 80,
+                        fontStyle: 'bold'
+                    }
+                },
+                headStyles: {
+                    fillColor: [42, 157, 143],
+                    textColor: [255, 255, 255],
+                    fontSize: 14,
+                    halign: 'center',
+                    font: 'helvetica',
+                    fontStyle: 'bold',
+                    lineWidth: 1,
+                    lineColor: [30, 130, 120]
+                },
+                alternateRowStyles: {
+                    fillColor: [245, 245, 245] // Gris muy claro para filas alternas
+                },
+                theme: 'grid',
+                margin: { top: 100, right: 40, bottom: 40, left: 40 },
+                didParseCell: function(data) {
+                    // Dar formato especial a las celdas de porcentaje
+                    if (data.column.index === 4 || data.column.index === 8) {
+                        if (data.cell.raw && !isNaN(parseFloat(data.cell.raw))) {
+                            const value = parseFloat(data.cell.raw);
+                            if (data.column.index === 4) {
+                                data.cell.styles.textColor = value >= 90 ? [0, 100, 0] : [170, 0, 0];
+                            } else {
+                                data.cell.styles.textColor = value <= 5 ? [0, 100, 0] : [170, 0, 0];
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Guardar archivo
+            doc.save(`Reporte_Metricas_${fecha_ini}_${fecha_fin}.pdf`);
+        }
+
+        // Función para exportar a CSV con formato para Excel
+        function exportarACSV() {
+            const fecha_ini = $('#fecha_ini').val();
+            const fecha_fin = $('#fecha_fin').val();
+            const filename = `Reporte_Metricas_${fecha_ini}_${fecha_fin}.csv`;
+            
+            // Obtener los datos de la tabla
+            const table = document.querySelector('#resultados table');
+            const rows = Array.from(table.querySelectorAll('tr'));
+            
+            // Agregar BOM y estilos para Excel
+            let csvContent = '\ufeff';
+            
+            // Agregar estilos para Excel (formato condicional)
+            csvContent += 'sep=,\n'; // Indicador de separador para Excel
+            
+            // Convertir a CSV con formato
+            csvContent += rows.map((row, index) => {
+                const cells = Array.from(row.querySelectorAll('th, td'));
+                return cells.map(cell => {
+                    let text = cell.textContent.trim();
+                    if (text.includes(',') || text.includes('"') || text.includes('\n')) {
+                        text = `"${text.replace(/"/g, '""')}"`;
+                    }
+                    return text;
+                }).join(',');
+            }).join('\n');
+            
+            // Crear y descargar el archivo
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            link.click();
         }
 
         // Función para mostrar alertas
