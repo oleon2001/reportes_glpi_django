@@ -1,13 +1,50 @@
 import json
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from .services import ReportGenerator
 import re
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, logout, authenticate
+from django.contrib import messages
+from django.contrib.auth.forms import AuthenticationForm
+from django.views.decorators.http import require_http_methods
 
+@ensure_csrf_cookie
+@require_http_methods(["GET", "POST"])
+def login_view(request):
+    if request.user.is_authenticated:
+        return redirect('index')
+    
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        if not username or not password:
+            messages.error(request, 'Por favor, ingrese su usuario y contraseña.')
+            return render(request, 'metricas/login.html')
+        
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            login(request, user)
+            next_url = request.GET.get('next', 'index')
+            return redirect(next_url)
+        else:
+            messages.error(request, 'Usuario o contraseña incorrectos. Por favor, intente nuevamente.')
+    
+    return render(request, 'metricas/login.html')
+
+@login_required
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+@login_required
 def index(request):
     return render(request, 'metricas/index.html')
 
+@login_required
 def obtener_tecnicos(request):
     try:
         tecnicos = ReportGenerator.obtener_tecnicos()
@@ -15,6 +52,7 @@ def obtener_tecnicos(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
+@login_required
 def generar_reporte(request):
     if request.method == 'POST':
         try:
@@ -43,6 +81,7 @@ def generar_reporte(request):
             return JsonResponse({'error': str(e)}, status=500)
     return JsonResponse({'error': 'Método no permitido'}, status=405)
 
+@login_required
 def tickets_reabiertos(request):
     if request.method == 'POST':
         try:

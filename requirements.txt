@@ -11,3 +11,4 @@ sqlparse==0.5.3
 typing_extensions==4.13.1
 tzdata==2025.2
 pip==25.0.1
+bcrypt==4.1.2

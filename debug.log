@@ -1,0 +1,767 @@
+INFO 2025-04-16 18:07:58,467 autoreload 24266 140122881914048 Watching for file changes with StatReloader
+INFO 2025-04-16 18:07:58,480 autoreload 24267 140667717047488 Watching for file changes with StatReloader
+INFO 2025-04-16 18:08:08,327 autoreload 24370 139837263496384 Watching for file changes with StatReloader
+INFO 2025-04-16 18:08:10,718 basehttp 24370 139836582962752 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:08:11,571 basehttp 24370 139836582962752 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:08:24,241 basehttp 24370 139836582962752 "GET /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:08:24,247 basehttp 24370 139836582962752 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:08:25,046 basehttp 24370 139836582962752 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:08:31,431 basehttp 24370 139836582962752 "GET /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:08:31,435 basehttp 24370 139836582962752 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:08:32,362 basehttp 24370 139836582962752 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:08:35,615 basehttp 24266 140122201376320 "GET /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:08:35,624 basehttp 24266 140122201376320 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:08:36,616 basehttp 24266 140122201376320 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:09:04,368 basehttp 24370 139836582962752 "GET /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:09:04,372 basehttp 24370 139836582962752 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:09:05,175 basehttp 24370 139836582962752 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:10:01,491 autoreload 24370 139837263496384 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 18:10:01,783 autoreload 24665 139797155263680 Watching for file changes with StatReloader
+INFO 2025-04-16 18:10:32,800 basehttp 24665 139796474697280 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:10:34,428 basehttp 24665 139796474697280 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:11:14,205 autoreload 24889 139997846688960 Watching for file changes with StatReloader
+INFO 2025-04-16 18:11:15,927 basehttp 24889 139997166147136 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:11:16,684 basehttp 24889 139997166147136 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:11:43,531 basehttp 24889 139997166147136 "POST /generar-reporte/ HTTP/1.1" 200 13495
+INFO 2025-04-16 18:12:02,472 basehttp 24889 139997166147136 "POST /generar-reporte/ HTTP/1.1" 200 60458
+INFO 2025-04-16 18:15:45,237 basehttp 24889 139997166147136 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:15:46,092 basehttp 24889 139997166147136 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:15:57,641 autoreload 26164 140603687195840 Watching for file changes with StatReloader
+INFO 2025-04-16 18:15:59,509 basehttp 26164 140603006641728 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:16:00,291 basehttp 26164 140603006641728 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:16:06,262 autoreload 26164 140603687195840 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/settings.py changed, reloading.
+INFO 2025-04-16 18:16:06,537 autoreload 26249 139755829916864 Watching for file changes with StatReloader
+INFO 2025-04-16 18:16:09,108 basehttp 26249 139755149358656 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:16:09,864 basehttp 26249 139755149358656 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:16:16,108 autoreload 26249 139755829916864 /home/oleon/Escritorio/reportes_glpi_django/metricas/services.py changed, reloading.
+INFO 2025-04-16 18:16:16,406 autoreload 26423 140676756673728 Watching for file changes with StatReloader
+INFO 2025-04-16 18:16:18,563 basehttp 26423 140676076082752 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:16:20,664 basehttp 26423 140676076082752 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:23:58,962 autoreload 4159 139914754819264 Watching for file changes with StatReloader
+INFO 2025-04-16 18:24:18,127 basehttp 4159 139914074289728 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:24:18,142 basehttp 4159 139914074289728 "GET / HTTP/1.1" 200 32256
+WARNING 2025-04-16 18:24:19,609 log 4159 139913995482688 Not Found: /favicon.ico
+WARNING 2025-04-16 18:24:19,611 basehttp 4159 139913995482688 "GET /favicon.ico HTTP/1.1" 404 3789
+WARNING 2025-04-16 18:24:19,626 log 4159 139913995482688 Not Found: /favicon.ico
+WARNING 2025-04-16 18:24:19,626 basehttp 4159 139913995482688 "GET /favicon.ico HTTP/1.1" 404 3789
+INFO 2025-04-16 18:24:20,280 basehttp 4159 139914074289728 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:24:20,937 basehttp 4159 139913995482688 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:28:40,884 autoreload 5711 139891493680320 Watching for file changes with StatReloader
+INFO 2025-04-16 18:28:42,319 basehttp 5711 139890813101632 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:28:43,226 basehttp 5711 139890813101632 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:42:48,177 autoreload 4355 140021382644928 Watching for file changes with StatReloader
+INFO 2025-04-16 18:43:06,204 basehttp 4355 140020702107200 "GET / HTTP/1.1" 200 32256
+INFO 2025-04-16 18:43:06,221 basehttp 4355 140020702107200 "GET / HTTP/1.1" 200 32256
+WARNING 2025-04-16 18:43:07,938 log 4355 140020693714496 Not Found: /favicon.ico
+WARNING 2025-04-16 18:43:07,939 basehttp 4355 140020693714496 "GET /favicon.ico HTTP/1.1" 404 3789
+WARNING 2025-04-16 18:43:07,956 log 4355 140020693714496 Not Found: /favicon.ico
+WARNING 2025-04-16 18:43:07,957 basehttp 4355 140020693714496 "GET /favicon.ico HTTP/1.1" 404 3789
+INFO 2025-04-16 18:43:08,663 basehttp 4355 140020702107200 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:43:10,106 basehttp 4355 140020693714496 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:44:33,994 basehttp 4355 140020693714496 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:44:35,292 basehttp 4355 140020693714496 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:44:37,433 basehttp 4355 140020693714496 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:44:37,463 basehttp 4355 140020693714496 "GET /login/ HTTP/1.1" 200 9853
+INFO 2025-04-16 18:44:52,372 auth_backend 4355 140020693714496 Successful authentication for user: 28492679
+INFO 2025-04-16 18:44:52,373 auth_backend 4355 140020693714496 Existing Django user found: 28492679
+INFO 2025-04-16 18:44:52,604 basehttp 4355 140020693714496 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:44:52,619 basehttp 4355 140020693714496 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:44:53,373 basehttp 4355 140020693714496 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:44:55,165 basehttp 4355 140020693714496 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:44:55,176 basehttp 4355 140020693714496 "GET /login/ HTTP/1.1" 200 10512
+INFO 2025-04-16 18:45:13,276 auth_backend 4355 140020693714496 Successful authentication for user: 28492679
+INFO 2025-04-16 18:45:13,278 auth_backend 4355 140020693714496 Existing Django user found: 28492679
+INFO 2025-04-16 18:45:13,777 basehttp 4355 140020693714496 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:45:13,792 basehttp 4355 140020693714496 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:45:15,273 basehttp 4355 140020693714496 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:47:54,134 autoreload 5060 140013201548480 Watching for file changes with StatReloader
+INFO 2025-04-16 18:47:57,494 basehttp 5060 140012521006656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:47:59,059 basehttp 5060 140012521006656 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:48:00,612 basehttp 5060 140012521006656 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:48:00,638 basehttp 5060 140012521006656 "GET /login/ HTTP/1.1" 200 10276
+INFO 2025-04-16 18:51:44,299 basehttp 5060 140012521006656 "GET /login/ HTTP/1.1" 200 8327
+INFO 2025-04-16 18:53:00,193 auth_backend 5060 140012521006656 Successful authentication for user: 28492679
+INFO 2025-04-16 18:53:00,194 auth_backend 5060 140012521006656 Existing Django user found: 28492679
+INFO 2025-04-16 18:53:00,460 basehttp 5060 140012521006656 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:53:00,473 basehttp 5060 140012521006656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:53:02,468 basehttp 5060 140012521006656 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:53:03,945 basehttp 5060 140012521006656 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:53:03,952 basehttp 5060 140012521006656 "GET /login/ HTTP/1.1" 200 9394
+INFO 2025-04-16 18:53:18,663 auth_backend 5060 140012521006656 Successful authentication for user: 28492679
+INFO 2025-04-16 18:53:18,664 auth_backend 5060 140012521006656 Existing Django user found: 28492679
+INFO 2025-04-16 18:53:18,900 basehttp 5060 140012521006656 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:53:18,907 basehttp 5060 140012521006656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:53:19,658 basehttp 5060 140012521006656 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:53:21,245 basehttp 5060 140012521006656 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:53:21,257 basehttp 5060 140012521006656 "GET /login/ HTTP/1.1" 200 9394
+INFO 2025-04-16 18:54:11,311 basehttp 5060 140012521006656 "GET /login/ HTTP/1.1" 200 7832
+INFO 2025-04-16 18:54:15,901 auth_backend 5060 140012521006656 Successful authentication for user: 28492679
+INFO 2025-04-16 18:54:15,902 auth_backend 5060 140012521006656 Existing Django user found: 28492679
+INFO 2025-04-16 18:54:16,158 basehttp 5060 140012521006656 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:54:16,175 basehttp 5060 140012521006656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:54:16,936 basehttp 5060 140012521006656 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:54:18,609 basehttp 5060 140012521006656 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:54:18,621 basehttp 5060 140012521006656 "GET /login/ HTTP/1.1" 200 8914
+INFO 2025-04-16 18:54:53,791 auth_backend 5060 140012521006656 Successful authentication for user: 28492679
+INFO 2025-04-16 18:54:53,792 auth_backend 5060 140012521006656 Existing Django user found: 28492679
+INFO 2025-04-16 18:54:54,063 basehttp 5060 140012521006656 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:54:54,070 basehttp 5060 140012521006656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:54:54,865 basehttp 5060 140012521006656 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:55:05,731 autoreload 5060 140013201548480 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 18:55:06,046 autoreload 6359 140388552516800 Watching for file changes with StatReloader
+INFO 2025-04-16 18:55:32,635 basehttp 6359 140387871966784 "POST /generar-reporte/ HTTP/1.1" 200 44620
+INFO 2025-04-16 18:56:14,493 basehttp 6359 140387871966784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:56:14,504 basehttp 6359 140387871966784 "GET /login/ HTTP/1.1" 200 8395
+INFO 2025-04-16 18:56:21,417 auth_backend 6359 140387871966784 Successful authentication for user: 28492679
+INFO 2025-04-16 18:56:21,418 auth_backend 6359 140387871966784 Existing Django user found: 28492679
+INFO 2025-04-16 18:56:21,664 basehttp 6359 140387871966784 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:56:21,681 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:56:22,501 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:57:42,036 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:57:42,854 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:57:44,296 basehttp 6359 140387871966784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:57:44,309 basehttp 6359 140387871966784 "GET /login/ HTTP/1.1" 200 8649
+INFO 2025-04-16 18:57:50,195 auth_backend 6359 140387871966784 Successful authentication for user: 28492679
+INFO 2025-04-16 18:57:50,196 auth_backend 6359 140387871966784 Existing Django user found: 28492679
+INFO 2025-04-16 18:57:50,464 basehttp 6359 140387871966784 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:57:50,479 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:57:53,219 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:57:58,134 basehttp 6359 140387871966784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:57:58,137 basehttp 6359 140387871966784 "GET /login/ HTTP/1.1" 200 8649
+INFO 2025-04-16 18:58:00,174 auth_backend 6359 140387871966784 Successful authentication for user: 28492679
+INFO 2025-04-16 18:58:00,175 auth_backend 6359 140387871966784 Existing Django user found: 28492679
+INFO 2025-04-16 18:58:00,426 basehttp 6359 140387871966784 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:58:00,443 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:58:01,234 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:58:06,155 basehttp 6359 140387871966784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:58:06,164 basehttp 6359 140387871966784 "GET /login/ HTTP/1.1" 200 8649
+INFO 2025-04-16 18:58:40,558 auth_backend 6359 140387871966784 Successful authentication for user: 29603587
+INFO 2025-04-16 18:58:41,149 auth_backend 6359 140387871966784 Created new Django user: 29603587
+INFO 2025-04-16 18:58:41,442 basehttp 6359 140387871966784 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:58:41,459 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:58:42,391 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 18:58:46,119 basehttp 6359 140387871966784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:58:46,125 basehttp 6359 140387871966784 "GET /login/ HTTP/1.1" 200 8649
+INFO 2025-04-16 18:58:49,993 auth_backend 6359 140387871966784 Successful authentication for user: 28492679
+INFO 2025-04-16 18:58:49,994 auth_backend 6359 140387871966784 Existing Django user found: 28492679
+INFO 2025-04-16 18:58:50,262 basehttp 6359 140387871966784 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 18:58:50,278 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 18:58:51,046 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:00:28,065 basehttp 6359 140387871966784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:00:28,070 basehttp 6359 140387871966784 "GET /login/ HTTP/1.1" 200 8649
+INFO 2025-04-16 19:00:29,986 auth_backend 6359 140387871966784 Successful authentication for user: 28492679
+INFO 2025-04-16 19:00:29,987 auth_backend 6359 140387871966784 Existing Django user found: 28492679
+INFO 2025-04-16 19:00:30,258 basehttp 6359 140387871966784 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:00:30,274 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:00:31,020 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:01:43,641 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:01:44,370 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:01:50,146 basehttp 6359 140387871966784 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:01:50,157 basehttp 6359 140387871966784 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:01:52,449 auth_backend 6359 140387871966784 Successful authentication for user: 28492679
+INFO 2025-04-16 19:01:52,450 auth_backend 6359 140387871966784 Existing Django user found: 28492679
+INFO 2025-04-16 19:01:52,687 basehttp 6359 140387871966784 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:01:52,703 basehttp 6359 140387871966784 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:01:53,474 basehttp 6359 140387871966784 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:02:12,255 autoreload 6986 140323629348032 Watching for file changes with StatReloader
+INFO 2025-04-16 19:02:14,300 basehttp 6986 140322948822592 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:02:15,488 basehttp 6986 140322948822592 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:02:45,182 basehttp 6986 140322948822592 "POST /generar-reporte/ HTTP/1.1" 200 60108
+INFO 2025-04-16 19:03:07,917 basehttp 6986 140322948822592 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:03:07,942 basehttp 6986 140322948822592 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:03:42,469 auth_backend 6986 140322948822592 Successful authentication for user: 28492679
+INFO 2025-04-16 19:03:42,470 auth_backend 6986 140322948822592 Existing Django user found: 28492679
+INFO 2025-04-16 19:03:42,787 basehttp 6986 140322948822592 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:03:42,801 basehttp 6986 140322948822592 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:03:43,636 basehttp 6986 140322948822592 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:03:46,338 basehttp 6986 140322948822592 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:03:46,346 basehttp 6986 140322948822592 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:04:03,987 auth_backend 6986 140322948822592 Successful authentication for user: 28492679
+INFO 2025-04-16 19:04:03,988 auth_backend 6986 140322948822592 Existing Django user found: 28492679
+INFO 2025-04-16 19:04:04,596 basehttp 6986 140322948822592 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:04:04,606 basehttp 6986 140322948822592 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:04:05,369 basehttp 6986 140322948822592 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:07:25,969 basehttp 6986 140322948822592 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:07:26,002 basehttp 6986 140322948822592 "GET /login/ HTTP/1.1" 200 8109
+WARNING 2025-04-16 19:07:26,056 basehttp 6986 140322948822592 "GET /static/metricas/css/styles.css HTTP/1.1" 404 1883
+INFO 2025-04-16 19:07:29,090 auth_backend 6986 140322940429888 Successful authentication for user: 28492679
+INFO 2025-04-16 19:07:29,091 auth_backend 6986 140322940429888 Existing Django user found: 28492679
+INFO 2025-04-16 19:07:29,353 basehttp 6986 140322940429888 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:07:29,369 basehttp 6986 140322940429888 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:07:30,165 basehttp 6986 140322940429888 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:07:39,668 autoreload 6986 140323629348032 /home/oleon/Escritorio/reportes_glpi_django/metricas/models.py changed, reloading.
+INFO 2025-04-16 19:07:39,958 autoreload 7572 140497135121600 Watching for file changes with StatReloader
+INFO 2025-04-16 19:08:03,792 autoreload 7572 140497135121600 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/settings.py changed, reloading.
+INFO 2025-04-16 19:08:04,093 autoreload 7639 140318131291328 Watching for file changes with StatReloader
+ERROR 2025-04-16 19:08:05,948 log 7639 140317445469760 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 56, in _view_wrapper
+    test_pass = test_func(request.user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 79, in <lambda>
+    lambda u: u.is_authenticated,
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 311, in get_user
+    user = backend.get_user(user_id)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/auth_backend.py", line 86, in get_user
+    return User.objects.get(pk=user_id)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 196, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't available; 'auth.User' has been swapped for 'metricas.User'
+ERROR 2025-04-16 19:08:05,949 basehttp 7639 140317445469760 "GET / HTTP/1.1" 500 103982
+INFO 2025-04-16 19:08:26,886 autoreload 7639 140318131291328 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/urls.py changed, reloading.
+INFO 2025-04-16 19:08:27,178 autoreload 7711 139954895918272 Watching for file changes with StatReloader
+ERROR 2025-04-16 19:09:28,063 log 7711 139954210113088 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 56, in _view_wrapper
+    test_pass = test_func(request.user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 79, in <lambda>
+    lambda u: u.is_authenticated,
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 311, in get_user
+    user = backend.get_user(user_id)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/auth_backend.py", line 86, in get_user
+    return User.objects.get(pk=user_id)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 196, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't available; 'auth.User' has been swapped for 'metricas.User'
+ERROR 2025-04-16 19:09:28,064 basehttp 7711 139954210113088 "GET / HTTP/1.1" 500 103982
+INFO 2025-04-16 19:09:34,647 autoreload 7711 139954895918272 /home/oleon/Escritorio/reportes_glpi_django/metricas/models.py changed, reloading.
+INFO 2025-04-16 19:09:34,992 autoreload 8066 139672329131200 Watching for file changes with StatReloader
+INFO 2025-04-16 19:09:56,568 autoreload 8066 139672329131200 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/settings.py changed, reloading.
+INFO 2025-04-16 19:09:56,828 autoreload 8123 140353940718784 Watching for file changes with StatReloader
+INFO 2025-04-16 19:10:00,384 basehttp 8123 140353254884928 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:10:01,346 basehttp 8123 140353254884928 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:10:13,256 basehttp 8123 140353254884928 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:10:13,275 basehttp 8123 140353254884928 "GET /login/ HTTP/1.1" 200 8109
+INFO 2025-04-16 19:10:13,378 basehttp 8123 140353254884928 "GET /static/metricas/css/styles.css HTTP/1.1" 200 360
+INFO 2025-04-16 19:10:18,529 auth_backend 8123 140353254884928 Successful authentication for user: 28492679
+INFO 2025-04-16 19:10:18,530 auth_backend 8123 140353254884928 Existing Django user found: 28492679
+ERROR 2025-04-16 19:10:18,902 log 8123 140353254884928 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 513, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+KeyError: 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: metricas_userprofile
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/views.py", line 30, in login_view
+    login(request, user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/models.py", line 20, in save_user_profile
+    if not hasattr(instance, 'profile'):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 520, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: metricas_userprofile
+ERROR 2025-04-16 19:10:18,905 basehttp 8123 140353254884928 "POST /login/ HTTP/1.1" 500 204830
+INFO 2025-04-16 19:10:45,964 basehttp 8123 140353254884928 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:10:47,597 auth_backend 8123 140353254884928 Successful authentication for user: 28492679
+INFO 2025-04-16 19:10:47,599 auth_backend 8123 140353254884928 Existing Django user found: 28492679
+ERROR 2025-04-16 19:10:47,861 log 8123 140353254884928 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 513, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+KeyError: 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: metricas_userprofile
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/views.py", line 30, in login_view
+    login(request, user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/models.py", line 20, in save_user_profile
+    if not hasattr(instance, 'profile'):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 520, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: metricas_userprofile
+ERROR 2025-04-16 19:10:47,861 basehttp 8123 140353254884928 "POST /login/ HTTP/1.1" 500 204830
+INFO 2025-04-16 19:10:56,056 basehttp 8123 140353254884928 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:10:57,548 auth_backend 8123 140353254884928 Successful authentication for user: 28492679
+INFO 2025-04-16 19:10:57,549 auth_backend 8123 140353254884928 Existing Django user found: 28492679
+ERROR 2025-04-16 19:10:57,823 log 8123 140353254884928 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 513, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+KeyError: 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: metricas_userprofile
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/views.py", line 30, in login_view
+    login(request, user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 197, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/models.py", line 24, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 65, in save
+    super().save(*args, **kwargs)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/base.py", line 1023, in save_base
+    post_save.send(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/oleon/Escritorio/reportes_glpi_django/metricas/models.py", line 20, in save_user_profile
+    if not hasattr(instance, 'profile'):
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 520, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/oleon/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: metricas_userprofile
+ERROR 2025-04-16 19:10:57,823 basehttp 8123 140353254884928 "POST /login/ HTTP/1.1" 500 204830
+INFO 2025-04-16 19:11:01,494 autoreload 8123 140353940718784 /home/oleon/Escritorio/reportes_glpi_django/metricas/models.py changed, reloading.
+INFO 2025-04-16 19:11:01,769 autoreload 8433 140445297296576 Watching for file changes with StatReloader
+INFO 2025-04-16 19:11:06,199 basehttp 8433 140444616717888 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:11:07,395 auth_backend 8433 140444616717888 Successful authentication for user: 28492679
+INFO 2025-04-16 19:11:07,397 auth_backend 8433 140444616717888 Existing Django user found: 28492679
+INFO 2025-04-16 19:11:07,643 basehttp 8433 140444616717888 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:11:07,658 basehttp 8433 140444616717888 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:11:08,380 basehttp 8433 140444616717888 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:13:19,348 autoreload 8433 140445297296576 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/settings.py changed, reloading.
+INFO 2025-04-16 19:13:19,624 autoreload 8773 140021516113088 Watching for file changes with StatReloader
+INFO 2025-04-16 19:14:10,183 basehttp 8773 140020835558976 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:14:10,887 basehttp 8773 140020835558976 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:14:12,924 basehttp 8773 140020835558976 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:14:12,941 basehttp 8773 140020835558976 "GET /login/ HTTP/1.1" 200 8400
+INFO 2025-04-16 19:14:14,618 auth_backend 8773 140020835558976 Successful authentication for user: 28492679
+INFO 2025-04-16 19:14:14,619 auth_backend 8773 140020835558976 Existing Django user found: 28492679
+INFO 2025-04-16 19:14:14,874 basehttp 8773 140020835558976 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:14:15,189 basehttp 8773 140020835558976 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:14:16,372 basehttp 8773 140020835558976 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:14:53,816 autoreload 8979 140698161374400 Watching for file changes with StatReloader
+INFO 2025-04-16 19:14:55,977 basehttp 8979 140697480824384 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:14:56,724 basehttp 8979 140697480824384 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:14:58,383 basehttp 8979 140697480824384 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:14:58,401 basehttp 8979 140697480824384 "GET /login/ HTTP/1.1" 200 8400
+INFO 2025-04-16 19:15:00,301 auth_backend 8979 140697480824384 Successful authentication for user: 28492679
+INFO 2025-04-16 19:15:00,302 auth_backend 8979 140697480824384 Existing Django user found: 28492679
+INFO 2025-04-16 19:15:00,637 basehttp 8979 140697480824384 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:15:00,954 basehttp 8979 140697480824384 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:15:01,978 basehttp 8979 140697480824384 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:15:50,334 autoreload 8979 140698161374400 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/settings.py changed, reloading.
+INFO 2025-04-16 19:15:50,639 autoreload 9234 139762788463808 Watching for file changes with StatReloader
+INFO 2025-04-16 19:16:15,467 basehttp 9234 139762107930176 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:16:15,477 basehttp 9234 139762107930176 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:16:17,173 auth_backend 9234 139762107930176 Successful authentication for user: 28492679
+INFO 2025-04-16 19:16:17,174 auth_backend 9234 139762107930176 Existing Django user found: 28492679
+INFO 2025-04-16 19:16:17,454 basehttp 9234 139762107930176 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:16:17,472 basehttp 9234 139762107930176 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:16:18,167 basehttp 9234 139762107930176 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:16:30,812 autoreload 9234 139762788463808 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/settings.py changed, reloading.
+INFO 2025-04-16 19:16:31,096 autoreload 9356 140028591228096 Watching for file changes with StatReloader
+INFO 2025-04-16 19:16:35,705 basehttp 9356 140027910690368 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:16:36,390 basehttp 9356 140027910690368 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:16:38,553 basehttp 9356 140027910690368 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:16:38,559 basehttp 9356 140027910690368 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:16:40,120 auth_backend 9356 140027910690368 Successful authentication for user: 28492679
+INFO 2025-04-16 19:16:40,121 auth_backend 9356 140027910690368 Existing Django user found: 28492679
+INFO 2025-04-16 19:16:40,387 basehttp 9356 140027910690368 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:16:40,701 basehttp 9356 140027910690368 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:16:43,165 basehttp 9356 140027910690368 "GET /tecnicos/ HTTP/1.1" 200 406367
+INFO 2025-04-16 19:17:22,178 basehttp 9356 140027910690368 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:17:23,311 basehttp 9356 140027910690368 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:17:24,829 basehttp 9356 140027910690368 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:17:24,843 basehttp 9356 140027910690368 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:17:26,619 auth_backend 9356 140027910690368 Successful authentication for user: 28492679
+INFO 2025-04-16 19:17:26,620 auth_backend 9356 140027910690368 Existing Django user found: 28492679
+INFO 2025-04-16 19:17:26,921 basehttp 9356 140027910690368 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:17:27,238 basehttp 9356 140027910690368 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:17:27,971 basehttp 9356 140027910690368 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:18:07,119 basehttp 9356 140027910690368 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:18:07,177 basehttp 9356 140027910690368 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:18:09,410 auth_backend 9356 140027910690368 Successful authentication for user: 28492679
+INFO 2025-04-16 19:18:09,411 auth_backend 9356 140027910690368 Existing Django user found: 28492679
+INFO 2025-04-16 19:18:09,687 basehttp 9356 140027910690368 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:18:09,997 basehttp 9356 140027910690368 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:18:10,771 basehttp 9356 140027910690368 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:18:19,516 autoreload 9356 140028591228096 /home/oleon/Escritorio/reportes_glpi_django/metricas/context_processors.py changed, reloading.
+INFO 2025-04-16 19:18:19,781 autoreload 9621 139910361408704 Watching for file changes with StatReloader
+INFO 2025-04-16 19:19:02,528 autoreload 10067 140363639461056 Watching for file changes with StatReloader
+INFO 2025-04-16 19:19:08,267 context_processors 10067 140362958898752 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:19:08,573 context_processors 10067 140362958898752 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:19:08,573 context_processors 10067 140362958898752 Generated initial: L
+INFO 2025-04-16 19:19:08,589 basehttp 10067 140362958898752 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:19:09,317 basehttp 10067 140362958898752 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:19:10,953 basehttp 10067 140362958898752 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:19:10,962 context_processors 10067 140362958898752 User not authenticated
+INFO 2025-04-16 19:19:10,973 basehttp 10067 140362958898752 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:19:12,548 auth_backend 10067 140362958898752 Successful authentication for user: 28492679
+INFO 2025-04-16 19:19:12,549 auth_backend 10067 140362958898752 Existing Django user found: 28492679
+INFO 2025-04-16 19:19:12,836 basehttp 10067 140362958898752 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:19:12,849 context_processors 10067 140362958898752 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:19:13,152 context_processors 10067 140362958898752 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:19:13,153 context_processors 10067 140362958898752 Generated initial: L
+INFO 2025-04-16 19:19:13,155 basehttp 10067 140362958898752 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:19:13,894 basehttp 10067 140362958898752 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:19:22,307 autoreload 10067 140363639461056 /home/oleon/Escritorio/reportes_glpi_django/reportes_glpi/settings.py changed, reloading.
+INFO 2025-04-16 19:19:22,578 autoreload 10182 139976616375488 Watching for file changes with StatReloader
+INFO 2025-04-16 19:20:55,599 context_processors 10182 139975935850048 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:20:55,903 context_processors 10182 139975935850048 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:20:55,904 context_processors 10182 139975935850048 Generated initial: L
+INFO 2025-04-16 19:20:55,922 basehttp 10182 139975935850048 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:20:56,853 basehttp 10182 139975935850048 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:21:00,778 basehttp 10182 139975935850048 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:21:00,787 context_processors 10182 139975935850048 User not authenticated
+INFO 2025-04-16 19:21:00,799 basehttp 10182 139975935850048 "GET /login/ HTTP/1.1" 200 8222
+INFO 2025-04-16 19:21:02,473 auth_backend 10182 139975935850048 Successful authentication for user: 28492679
+INFO 2025-04-16 19:21:02,474 auth_backend 10182 139975935850048 Existing Django user found: 28492679
+INFO 2025-04-16 19:21:02,719 basehttp 10182 139975935850048 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:21:02,732 context_processors 10182 139975935850048 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:21:03,034 context_processors 10182 139975935850048 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:21:03,035 context_processors 10182 139975935850048 Generated initial: L
+INFO 2025-04-16 19:21:03,037 basehttp 10182 139975935850048 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:21:04,055 basehttp 10182 139975935850048 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:23:51,331 context_processors 10182 139975935850048 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:23:51,637 context_processors 10182 139975935850048 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:23:51,637 context_processors 10182 139975935850048 Generated initial: L
+INFO 2025-04-16 19:23:51,640 basehttp 10182 139975935850048 "GET / HTTP/1.1" 200 33311
+INFO 2025-04-16 19:23:52,903 basehttp 10182 139975935850048 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:24:14,984 basehttp 10182 139975935850048 "POST /generar-reporte/ HTTP/1.1" 200 49398
+INFO 2025-04-16 19:24:20,694 basehttp 10182 139975935850048 "POST /tickets-reabiertos/ HTTP/1.1" 200 300
+INFO 2025-04-16 19:28:16,716 autoreload 10182 139976616375488 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 19:28:17,058 autoreload 10574 140249907287232 Watching for file changes with StatReloader
+INFO 2025-04-16 19:28:22,806 autoreload 10574 140249907287232 /home/oleon/Escritorio/reportes_glpi_django/metricas/urls.py changed, reloading.
+INFO 2025-04-16 19:28:23,103 autoreload 10621 140207621575872 Watching for file changes with StatReloader
+INFO 2025-04-16 19:29:19,671 autoreload 11080 140656177562816 Watching for file changes with StatReloader
+INFO 2025-04-16 19:29:33,706 basehttp 11080 140655489689152 "GET / HTTP/1.1" 302 0
+INFO 2025-04-16 19:29:33,709 context_processors 11080 140655489689152 User not authenticated
+INFO 2025-04-16 19:29:33,711 basehttp 11080 140655489689152 "GET /login/?next=/ HTTP/1.1" 200 8222
+WARNING 2025-04-16 19:29:34,884 log 11080 140655489689152 Not Found: /favicon.ico
+WARNING 2025-04-16 19:29:34,885 basehttp 11080 140655489689152 "GET /favicon.ico HTTP/1.1" 404 4062
+INFO 2025-04-16 19:29:40,437 auth_backend 11080 140655489689152 Successful authentication for user: 28492679
+INFO 2025-04-16 19:29:40,439 auth_backend 11080 140655489689152 Existing Django user found: 28492679
+INFO 2025-04-16 19:29:40,677 basehttp 11080 140655489689152 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:29:40,691 context_processors 11080 140655489689152 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:29:40,998 context_processors 11080 140655489689152 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:29:40,999 context_processors 11080 140655489689152 Generated initial: L
+INFO 2025-04-16 19:29:41,001 basehttp 11080 140655489689152 "GET / HTTP/1.1" 200 36073
+INFO 2025-04-16 19:29:42,125 basehttp 11080 140655489689152 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:30:00,358 basehttp 11080 140655489689152 "POST /generar-reporte/ HTTP/1.1" 200 49398
+WARNING 2025-04-16 19:30:05,345 log 11080 140655489689152 Bad Request: /exportar-reporte/
+WARNING 2025-04-16 19:30:05,345 basehttp 11080 140655489689152 "POST /exportar-reporte/ HTTP/1.1" 400 43
+WARNING 2025-04-16 19:30:11,755 log 11080 140655489689152 Bad Request: /exportar-reporte/
+WARNING 2025-04-16 19:30:11,755 basehttp 11080 140655489689152 "POST /exportar-reporte/ HTTP/1.1" 400 43
+INFO 2025-04-16 19:30:18,371 autoreload 11080 140656177562816 /home/oleon/Escritorio/reportes_glpi_django/metricas/views.py changed, reloading.
+INFO 2025-04-16 19:30:18,683 autoreload 11437 139701160342720 Watching for file changes with StatReloader
+INFO 2025-04-16 19:30:27,834 autoreload 11482 140058096161984 Watching for file changes with StatReloader
+INFO 2025-04-16 19:30:39,721 autoreload 11535 140002426410176 Watching for file changes with StatReloader
+INFO 2025-04-16 19:30:42,009 context_processors 11535 140001745876544 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:30:42,312 context_processors 11535 140001745876544 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:30:42,312 context_processors 11535 140001745876544 Generated initial: L
+INFO 2025-04-16 19:30:42,317 basehttp 11535 140001745876544 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:30:43,048 basehttp 11535 140001745876544 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:30:53,163 basehttp 11535 140001745876544 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:30:53,173 context_processors 11535 140001745876544 User not authenticated
+INFO 2025-04-16 19:30:53,183 basehttp 11535 140001745876544 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:30:55,132 auth_backend 11535 140001745876544 Successful authentication for user: 28492679
+INFO 2025-04-16 19:30:55,133 auth_backend 11535 140001745876544 Existing Django user found: 28492679
+INFO 2025-04-16 19:30:55,388 basehttp 11535 140001745876544 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:30:55,401 context_processors 11535 140001745876544 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:30:55,705 context_processors 11535 140001745876544 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:30:55,705 context_processors 11535 140001745876544 Generated initial: L
+INFO 2025-04-16 19:30:55,708 basehttp 11535 140001745876544 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:30:56,464 basehttp 11535 140001745876544 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:31:36,211 basehttp 11535 140001745876544 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:31:36,215 context_processors 11535 140001745876544 User not authenticated
+INFO 2025-04-16 19:31:36,216 basehttp 11535 140001745876544 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:31:38,024 auth_backend 11535 140001745876544 Successful authentication for user: 28492679
+INFO 2025-04-16 19:31:38,025 auth_backend 11535 140001745876544 Existing Django user found: 28492679
+INFO 2025-04-16 19:31:38,269 basehttp 11535 140001745876544 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:31:38,275 context_processors 11535 140001745876544 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:31:38,576 context_processors 11535 140001745876544 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:31:38,577 context_processors 11535 140001745876544 Generated initial: L
+INFO 2025-04-16 19:31:38,578 basehttp 11535 140001745876544 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:31:39,310 basehttp 11535 140001745876544 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:32:01,675 autoreload 11535 140002426410176 /home/oleon/Escritorio/reportes_glpi_django/metricas/services.py changed, reloading.
+INFO 2025-04-16 19:32:01,966 autoreload 11855 139764009522368 Watching for file changes with StatReloader
+INFO 2025-04-16 19:32:08,069 context_processors 11855 139763328964160 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:32:08,377 context_processors 11855 139763328964160 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:32:08,377 context_processors 11855 139763328964160 Generated initial: L
+INFO 2025-04-16 19:32:08,396 basehttp 11855 139763328964160 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:32:09,157 basehttp 11855 139763328964160 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:32:11,292 basehttp 11855 139763328964160 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:32:11,301 context_processors 11855 139763328964160 User not authenticated
+INFO 2025-04-16 19:32:11,315 basehttp 11855 139763328964160 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:32:13,634 auth_backend 11855 139763328964160 Successful authentication for user: 28492679
+INFO 2025-04-16 19:32:13,635 auth_backend 11855 139763328964160 Existing Django user found: 28492679
+INFO 2025-04-16 19:32:13,909 basehttp 11855 139763328964160 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:32:13,924 context_processors 11855 139763328964160 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:32:14,224 context_processors 11855 139763328964160 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:32:14,224 context_processors 11855 139763328964160 Generated initial: L
+INFO 2025-04-16 19:32:14,227 basehttp 11855 139763328964160 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:32:15,047 basehttp 11855 139763328964160 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:32:23,771 basehttp 11855 139763328964160 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:32:23,777 context_processors 11855 139763328964160 User not authenticated
+INFO 2025-04-16 19:32:23,781 basehttp 11855 139763328964160 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:32:25,257 auth_backend 11855 139763328964160 Successful authentication for user: 28492679
+INFO 2025-04-16 19:32:25,258 auth_backend 11855 139763328964160 Existing Django user found: 28492679
+INFO 2025-04-16 19:32:25,538 basehttp 11855 139763328964160 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:32:25,551 context_processors 11855 139763328964160 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:32:25,854 context_processors 11855 139763328964160 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:32:25,855 context_processors 11855 139763328964160 Generated initial: L
+INFO 2025-04-16 19:32:25,858 basehttp 11855 139763328964160 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:32:26,605 basehttp 11855 139763328964160 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:32:30,961 autoreload 11855 139764009522368 /home/oleon/Escritorio/reportes_glpi_django/metricas/services.py changed, reloading.
+INFO 2025-04-16 19:32:31,246 autoreload 12000 139866438407360 Watching for file changes with StatReloader
+INFO 2025-04-16 19:32:38,023 context_processors 12000 139865757853248 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:32:38,328 context_processors 12000 139865757853248 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:32:38,328 context_processors 12000 139865757853248 Generated initial: L
+INFO 2025-04-16 19:32:38,342 basehttp 12000 139865757853248 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:32:39,060 basehttp 12000 139865757853248 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:32:39,969 basehttp 12000 139865757853248 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:32:39,978 context_processors 12000 139865757853248 User not authenticated
+INFO 2025-04-16 19:32:39,988 basehttp 12000 139865757853248 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:32:41,596 auth_backend 12000 139865757853248 Successful authentication for user: 28492679
+INFO 2025-04-16 19:32:41,597 auth_backend 12000 139865757853248 Existing Django user found: 28492679
+INFO 2025-04-16 19:32:41,886 basehttp 12000 139865757853248 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:32:41,900 context_processors 12000 139865757853248 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:32:42,202 context_processors 12000 139865757853248 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:32:42,202 context_processors 12000 139865757853248 Generated initial: L
+INFO 2025-04-16 19:32:42,205 basehttp 12000 139865757853248 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:32:42,917 basehttp 12000 139865757853248 "GET /tecnicos/ HTTP/1.1" 200 406395
+INFO 2025-04-16 19:33:18,255 basehttp 12000 139865757853248 "POST /generar-reporte/ HTTP/1.1" 200 49416
+INFO 2025-04-16 19:35:31,457 autoreload 12000 139866438407360 /home/oleon/Escritorio/reportes_glpi_django/metricas/services.py changed, reloading.
+INFO 2025-04-16 19:35:31,751 autoreload 12191 140368741942464 Watching for file changes with StatReloader
+INFO 2025-04-16 19:36:00,184 context_processors 12191 140368061400640 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:36:00,497 context_processors 12191 140368061400640 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:36:00,497 context_processors 12191 140368061400640 Generated initial: L
+INFO 2025-04-16 19:36:00,503 basehttp 12191 140368061400640 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:36:01,459 basehttp 12191 140368061400640 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:36:04,352 basehttp 12191 140368061400640 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:36:04,363 context_processors 12191 140368061400640 User not authenticated
+INFO 2025-04-16 19:36:04,375 basehttp 12191 140368061400640 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:36:12,212 auth_backend 12191 140368061400640 Successful authentication for user: 28492679
+INFO 2025-04-16 19:36:12,213 auth_backend 12191 140368061400640 Existing Django user found: 28492679
+INFO 2025-04-16 19:36:12,638 basehttp 12191 140368061400640 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:36:12,650 context_processors 12191 140368061400640 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:36:12,950 context_processors 12191 140368061400640 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:36:12,951 context_processors 12191 140368061400640 Generated initial: L
+INFO 2025-04-16 19:36:12,952 basehttp 12191 140368061400640 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:36:13,780 basehttp 12191 140368061400640 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:36:45,524 autoreload 12191 140368741942464 /home/oleon/Escritorio/reportes_glpi_django/metricas/services.py changed, reloading.
+INFO 2025-04-16 19:36:45,846 autoreload 12372 139782066181312 Watching for file changes with StatReloader
+INFO 2025-04-16 19:36:54,251 basehttp 12372 139781385639488 "POST /generar-reporte/ HTTP/1.1" 200 49416
+INFO 2025-04-16 19:38:58,166 autoreload 12372 139782066181312 /home/oleon/Escritorio/reportes_glpi_django/metricas/services.py changed, reloading.
+INFO 2025-04-16 19:38:58,476 autoreload 12505 139750332093632 Watching for file changes with StatReloader
+INFO 2025-04-16 19:39:00,009 basehttp 12505 139749651502656 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:39:00,014 context_processors 12505 139749651502656 User not authenticated
+INFO 2025-04-16 19:39:00,018 basehttp 12505 139749651502656 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:39:07,941 auth_backend 12505 139749651502656 Successful authentication for user: 28492679
+INFO 2025-04-16 19:39:07,942 auth_backend 12505 139749651502656 Existing Django user found: 28492679
+INFO 2025-04-16 19:39:08,194 basehttp 12505 139749651502656 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:39:08,210 context_processors 12505 139749651502656 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:39:08,512 context_processors 12505 139749651502656 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:39:08,512 context_processors 12505 139749651502656 Generated initial: L
+INFO 2025-04-16 19:39:08,515 basehttp 12505 139749651502656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:39:09,233 basehttp 12505 139749651502656 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:39:24,359 basehttp 12505 139749651502656 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:39:24,366 context_processors 12505 139749651502656 User not authenticated
+INFO 2025-04-16 19:39:24,369 basehttp 12505 139749651502656 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:39:26,791 auth_backend 12505 139749651502656 Successful authentication for user: 28492679
+INFO 2025-04-16 19:39:26,792 auth_backend 12505 139749651502656 Existing Django user found: 28492679
+INFO 2025-04-16 19:39:27,126 basehttp 12505 139749651502656 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:39:27,141 context_processors 12505 139749651502656 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:39:27,440 context_processors 12505 139749651502656 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:39:27,441 context_processors 12505 139749651502656 Generated initial: L
+INFO 2025-04-16 19:39:27,441 basehttp 12505 139749651502656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:39:28,198 basehttp 12505 139749651502656 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:40:05,989 basehttp 12505 139749651502656 "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:40:05,992 context_processors 12505 139749651502656 User not authenticated
+INFO 2025-04-16 19:40:05,993 basehttp 12505 139749651502656 "GET /login/ HTTP/1.1" 200 8042
+INFO 2025-04-16 19:40:15,006 auth_backend 12505 139749651502656 Successful authentication for user: 28492679
+INFO 2025-04-16 19:40:15,007 auth_backend 12505 139749651502656 Existing Django user found: 28492679
+INFO 2025-04-16 19:40:15,259 basehttp 12505 139749651502656 "POST /login/ HTTP/1.1" 302 0
+INFO 2025-04-16 19:40:15,273 context_processors 12505 139749651502656 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:40:15,573 context_processors 12505 139749651502656 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:40:15,574 context_processors 12505 139749651502656 Generated initial: L
+INFO 2025-04-16 19:40:15,576 basehttp 12505 139749651502656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:40:17,944 basehttp 12505 139749651502656 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:40:34,600 context_processors 12505 139749651502656 Processing user_initial for user: 28492679
+INFO 2025-04-16 19:40:34,901 context_processors 12505 139749651502656 Found user data: {'name': '28492679', 'realname': 'Leon', 'firstname': 'Oswaldo ( INT-VE-545 )'}
+INFO 2025-04-16 19:40:34,902 context_processors 12505 139749651502656 Generated initial: L
+INFO 2025-04-16 19:40:34,904 basehttp 12505 139749651502656 "GET / HTTP/1.1" 200 32541
+INFO 2025-04-16 19:40:35,826 basehttp 12505 139749651502656 "GET /tecnicos/ HTTP/1.1" 200 406425
+INFO 2025-04-16 19:40:59,491 basehttp 12505 139749651502656 "POST /generar-reporte/ HTTP/1.1" 200 60460

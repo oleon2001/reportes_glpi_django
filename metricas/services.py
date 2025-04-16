@@ -1,16 +1,18 @@
 import mysql.connector
 import pandas as pd
 from django.conf import settings
+from datetime import datetime, date
+import calendar
 
 class DatabaseConnector:
     @staticmethod
     def get_connection():
         return mysql.connector.connect(
-            user=settings.DATABASES['default']['USER'],
-            password=settings.DATABASES['default']['PASSWORD'],
-            host=settings.DATABASES['default']['HOST'],
-            database=settings.DATABASES['default']['NAME'],
-            port=settings.DATABASES['default']['PORT']
+            user=settings.DATABASES['glpi']['USER'],
+            password=settings.DATABASES['glpi']['PASSWORD'],
+            host=settings.DATABASES['glpi']['HOST'],
+            database=settings.DATABASES['glpi']['NAME'],
+            port=int(settings.DATABASES['glpi']['PORT'])
         )
 
 class ReportGenerator:
@@ -25,7 +27,19 @@ class ReportGenerator:
         return tecnicos
 
     @staticmethod
-    def generar_reporte_principal(fecha_ini, fecha_fin, tecnicos):
+    def generar_reporte_principal(fecha_ini=None, fecha_fin=None, tecnicos=None):
+        # Si no se proporcionan fechas, usar el mes en curso
+        if fecha_ini is None:
+            # Primer día del mes actual
+            today = date.today()
+            fecha_ini = date(today.year, today.month, 1).strftime('%Y-%m-%d')
+        
+        if fecha_fin is None:
+            # Último día del mes actual
+            today = date.today()
+            _, last_day = calendar.monthrange(today.year, today.month)
+            fecha_fin = date(today.year, today.month, last_day).strftime('%Y-%m-%d')
+        
         conn = DatabaseConnector.get_connection()
         cursor = conn.cursor()
 
@@ -209,7 +223,19 @@ class ReportGenerator:
         return df.to_dict(orient='records')
 
     @staticmethod
-    def obtener_tickets_reabiertos(tecnico, fecha_ini, fecha_fin):
+    def obtener_tickets_reabiertos(tecnico, fecha_ini=None, fecha_fin=None):
+        # Si no se proporcionan fechas, usar el mes en curso
+        if fecha_ini is None:
+            # Primer día del mes actual
+            today = date.today()
+            fecha_ini = date(today.year, today.month, 1).strftime('%Y-%m-%d')
+        
+        if fecha_fin is None:
+            # Último día del mes actual
+            today = date.today()
+            _, last_day = calendar.monthrange(today.year, today.month)
+            fecha_fin = date(today.year, today.month, last_day).strftime('%Y-%m-%d')
+            
         conn = DatabaseConnector.get_connection()
         cursor = conn.cursor()
 
